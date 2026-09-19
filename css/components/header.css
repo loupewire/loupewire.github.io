@@ -1,0 +1,168 @@
+/* ============================================================
+   Site header: brand, nav, theme toggle, install CTA.
+
+   Narrow screens collapse the nav behind a button only when the
+   document is scripted (`html.js`, set by the theme boot). Without
+   JavaScript the nav is simply visible, stacked under the brand, so a
+   link is never unreachable.
+   ============================================================ */
+
+.site-header {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: var(--loupewire-z-sticky);
+  background: var(--loupewire-bg);
+  border-block-end: 1px solid var(--loupewire-border);
+}
+
+.site-header__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--loupewire-space-lg);
+  min-block-size: var(--loupewire-header-block-size);
+}
+
+.site-header__brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--loupewire-space-sm);
+  margin-inline-end: auto;
+  font-size: var(--loupewire-font-size-lg);
+  font-weight: var(--loupewire-font-weight-semibold);
+  color: var(--loupewire-text);
+  text-decoration: none;
+}
+
+.site-header__brand img {
+  border-radius: 7px; /* the mark's plate radius at 28px */
+}
+
+.site-header__menu {
+  display: none;
+  inline-size: 40px;
+  block-size: 40px;
+  padding: 0;
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-md);
+  background: transparent;
+  color: var(--loupewire-text);
+  cursor: pointer;
+}
+
+.site-header__menu-close {
+  display: none;
+}
+
+.site-header__menu[aria-expanded='true'] .site-header__menu-open {
+  display: none;
+}
+
+.site-header__menu[aria-expanded='true'] .site-header__menu-close {
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--loupewire-space-xl);
+}
+
+.site-nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--loupewire-space-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav__link {
+  padding-block: var(--loupewire-space-sm);
+  color: var(--loupewire-text-muted);
+  font-weight: var(--loupewire-font-weight-medium);
+  text-decoration: none;
+}
+
+.site-nav__link:hover,
+.site-nav__link[aria-current='page'] {
+  color: var(--loupewire-text);
+}
+
+.site-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--loupewire-space-md);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 36px;
+  block-size: 36px;
+  padding: 0;
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-full);
+  background: transparent;
+  color: var(--loupewire-text-muted);
+  cursor: pointer;
+  transition: color var(--loupewire-transition-fast) var(--loupewire-ease);
+}
+
+.theme-toggle:hover {
+  color: var(--loupewire-text);
+}
+
+/* Dark shows the sun (what you get when you press); light shows the moon. */
+.theme-toggle__moon {
+  display: none;
+}
+
+html:not([data-loupewire-theme='dark']) .theme-toggle__sun {
+  display: none;
+}
+
+html:not([data-loupewire-theme='dark']) .theme-toggle__moon {
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .site-header__inner {
+    padding-block: var(--loupewire-space-sm);
+  }
+
+  html.js .site-header__menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-nav {
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--loupewire-space-md);
+    padding-block: var(--loupewire-space-md) var(--loupewire-space-lg);
+  }
+
+  html.js .site-nav:not([data-open]) {
+    display: none;
+  }
+
+  .site-nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .site-nav__link {
+    display: block;
+    padding-block: var(--loupewire-space-md);
+    border-block-end: 1px solid var(--loupewire-border);
+  }
+
+  .site-nav__actions {
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,103 @@
+/* ============================================================
+   Buttons: primary (install), secondary, ghost. Same primitives the
+   extension's buttons use; the sizes are a page's, not a toolbar's.
+
+   `aria-disabled="true"` is the "Coming soon" install button while no
+   store id exists. It is a <span>, so it is not focusable and not a link,
+   but it keeps the primary look so the page layout does not change the
+   day the id lands.
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--loupewire-space-sm);
+  min-block-size: 40px;
+  padding: var(--loupewire-space-sm) var(--loupewire-space-lg);
+  border: 1px solid transparent;
+  border-radius: var(--loupewire-radius-md);
+  font: inherit;
+  font-size: var(--loupewire-font-size-md);
+  font-weight: var(--loupewire-font-weight-semibold);
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--loupewire-transition-fast) var(--loupewire-ease),
+    border-color var(--loupewire-transition-fast) var(--loupewire-ease),
+    color var(--loupewire-transition-fast) var(--loupewire-ease);
+}
+
+.btn--lg {
+  min-block-size: 48px;
+  padding-inline: var(--loupewire-space-xl);
+  font-size: var(--loupewire-font-size-lg);
+}
+
+.btn--block {
+  inline-size: 100%;
+}
+
+.btn--primary {
+  background: var(--loupewire-brand-primary);
+  border-color: var(--loupewire-brand-primary);
+  color: var(--loupewire-brand-primary-ink);
+}
+
+.btn--primary:hover {
+  background: var(--loupewire-brand-primary-hover);
+  border-color: var(--loupewire-brand-primary-hover);
+  color: var(--loupewire-brand-primary-ink);
+}
+
+.btn--primary:active {
+  background: var(--loupewire-brand-primary-active);
+  border-color: var(--loupewire-brand-primary-active);
+}
+
+.btn--secondary {
+  background: transparent;
+  border-color: var(--loupewire-border-strong);
+  color: var(--loupewire-text);
+}
+
+.btn--secondary:hover {
+  background: var(--loupewire-surface-hover);
+  color: var(--loupewire-text);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--loupewire-text-muted);
+}
+
+.btn--ghost:hover {
+  background: var(--loupewire-surface-hover);
+  color: var(--loupewire-text);
+}
+
+.btn[aria-disabled='true'] {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.btn[aria-disabled='true']:hover {
+  background: var(--loupewire-brand-primary);
+  border-color: var(--loupewire-brand-primary);
+}
+
+/* On the hero gradient every theme's primary is too close to the plate; the
+   ink button is the one that reads there. */
+.btn--on-hero {
+  background: var(--loupewire-hero-ink);
+  border-color: var(--loupewire-hero-ink);
+  color: #101418; /* brand-primary-ink of the dark tier; the hero is fixed dark */
+}
+
+.btn--on-hero:hover {
+  background: var(--loupewire-hero-ink-muted);
+  border-color: transparent;
+  color: #101418;
+}

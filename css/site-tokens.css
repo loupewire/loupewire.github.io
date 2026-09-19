@@ -1,0 +1,45 @@
+/* ============================================================
+   Site-only tokens. Loaded after css/tokens.css, which the build
+   generates verbatim from the extension's tokens.css, light.css and
+   dark.css, so every colour, radius, shadow and motion value on this
+   site is the product's own. This file adds only what a marketing page
+   needs and a dense dev tool does not: a display type scale, a wider
+   body size, section rhythm and the hero gradient.
+
+   Rules carried over from the extension: every value is a token, no
+   raw hex outside this file and tokens.css, logical properties only,
+   system font stack only.
+   ============================================================ */
+
+:root {
+  /* Reading size. The extension is 13px because it is a table; a page is read. */
+  --loupewire-site-font-size: 16px;
+  --loupewire-site-line-height: 1.6;
+
+  /* Display scale for hero and section titles. Fluid between phone and desktop. */
+  --loupewire-display-xl: clamp(2.25rem, 1.5rem + 3vw, 3.5rem);
+  --loupewire-display-lg: clamp(1.75rem, 1.25rem + 2vw, 2.5rem);
+  --loupewire-display-md: clamp(1.375rem, 1.15rem + 1vw, 1.75rem);
+  --loupewire-display-sm: 1.125rem;
+  --loupewire-display-weight: 700;
+  --loupewire-display-tracking: -0.02em;
+  --loupewire-display-line-height: 1.15;
+
+  /* Layout rhythm. */
+  --loupewire-container-inline-size: 1120px;
+  --loupewire-container-padding: clamp(16px, 4vw, 32px);
+  --loupewire-section-gap: clamp(56px, 10vw, 112px);
+  --loupewire-space-2xl: 32px;
+  --loupewire-space-3xl: 48px;
+  --loupewire-space-4xl: 64px;
+  --loupewire-radius-xl: 16px;
+  --loupewire-header-block-size: 64px;
+  --loupewire-nav-breakpoint: 768px; /* documentary: media queries cannot read a custom property */
+
+  /* The mark's plate, brand-primary of the dark tier to brand-primary of the
+     light tier (src/assets/icons/mark.svg). Fixed in both themes because it
+     is the brand, not a surface. */
+  --loupewire-hero-gradient: linear-gradient(135deg, #e8a33d 0%, #925e0e 100%);
+  --loupewire-hero-ink: #ffffff;
+  --loupewire-hero-ink-muted: rgba(255, 255, 255, 0.82);
+}

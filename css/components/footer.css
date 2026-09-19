@@ -1,0 +1,93 @@
+/* ============================================================
+   Site footer: brand column, link groups from site.json, bottom line.
+   ============================================================ */
+
+.site-footer {
+  margin-block-start: var(--loupewire-section-gap);
+  border-block-start: 1px solid var(--loupewire-border);
+  background: var(--loupewire-surface);
+  color: var(--loupewire-text-muted);
+  font-size: var(--loupewire-font-size-md);
+}
+
+.site-footer__inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: var(--loupewire-space-2xl);
+  padding-block: var(--loupewire-space-3xl);
+}
+
+.site-footer__brand {
+  grid-column: 1 / -1;
+  max-inline-size: 420px;
+}
+
+@media (min-width: 768px) {
+  .site-footer__inner {
+    grid-template-columns: 2fr repeat(3, 1fr);
+  }
+
+  .site-footer__brand {
+    grid-column: auto;
+  }
+}
+
+.site-footer__logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--loupewire-space-sm);
+  margin-block-end: var(--loupewire-space-md);
+  font-size: var(--loupewire-font-size-lg);
+  font-weight: var(--loupewire-font-weight-semibold);
+  color: var(--loupewire-text);
+  text-decoration: none;
+}
+
+.site-footer__logo img {
+  border-radius: 8px; /* the mark's plate radius at 32px */
+}
+
+.site-footer__tagline {
+  margin-block-end: var(--loupewire-space-md);
+}
+
+.site-footer__promise {
+  padding-inline-start: var(--loupewire-space-md);
+  border-inline-start: 2px solid var(--loupewire-brand-accent);
+  color: var(--loupewire-text);
+}
+
+.site-footer__title {
+  margin-block-end: var(--loupewire-space-md);
+  font-size: var(--loupewire-font-size-sm);
+  font-weight: var(--loupewire-font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--loupewire-text);
+}
+
+.site-footer__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer__links li + li {
+  margin-block-start: var(--loupewire-space-sm);
+}
+
+.site-footer__links a {
+  color: var(--loupewire-text-muted);
+  text-decoration: none;
+}
+
+.site-footer__links a:hover {
+  color: var(--loupewire-text);
+  text-decoration: underline;
+}
+
+.site-footer__bottom {
+  padding-block: var(--loupewire-space-lg);
+  border-block-start: 1px solid var(--loupewire-border);
+  font-size: var(--loupewire-font-size-sm);
+}

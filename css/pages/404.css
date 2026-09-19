@@ -1,0 +1,29 @@
+/* The 404 page: one centred block, nothing to explore. */
+
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--loupewire-space-lg);
+  max-inline-size: 560px;
+  padding-block: var(--loupewire-section-gap);
+}
+
+.not-found__code {
+  font-family: var(--loupewire-font-family-mono);
+  font-size: var(--loupewire-font-size-lg);
+  font-weight: var(--loupewire-font-weight-semibold);
+  color: var(--loupewire-accent);
+}
+
+.not-found__text {
+  font-size: var(--loupewire-font-size-lg);
+  color: var(--loupewire-text-muted);
+}
+
+.not-found__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--loupewire-space-md);
+  margin-block-start: var(--loupewire-space-sm);
+}

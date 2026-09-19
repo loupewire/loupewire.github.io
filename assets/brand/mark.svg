@@ -1,0 +1,40 @@
+<!--
+  Loupewire mark — the single source for every rendered icon.
+
+  Grid 128, plate full bleed. A filled plate is what carries the icon through
+  the three places it appears: the Chrome Web Store listing (white), a dark
+  toolbar and a light toolbar. A dark plate and a light plate were both built
+  and measured against this one; the dark plate sank into a dark toolbar, and
+  the light plate vanished on the store's white.
+
+  The glass is a SOLID white disc and the globe inside it is a SOLID shape with
+  its lines cut out in white. Measured at 16px, every stroked version of this
+  artwork closed up into a blur while the solid ones held. Whatever else
+  changes, keep both of them solid.
+
+  Disc radius is 46. It was measured at 46, 49 and 52: past 49 the disc starts
+  eating the handle, and at 52 the icon stops reading as a magnifier at all.
+  If the disc grows, the handle has to grow with it or the metaphor is gone.
+
+  Every colour is a token, and the gradient runs between two official steps of
+  the same brand colour — brand-primary of the dark tier (#E8A33D,
+  dark.css:15) to brand-primary of the light tier (#925E0E, tokens.css:94).
+  The globe takes that same darker step; the glass is brand-primary-ink
+  (#FFFFFF, tokens.css:98). No hex here is invented; do not introduce one.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8A33D"/>
+      <stop offset="1" stop-color="#925E0E"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="30" fill="url(#plate)"/>
+  <circle cx="55" cy="53" r="46" fill="#FFFFFF"/>
+  <path d="M88.5 86.5L104.5 102.5" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" fill="none"/>
+  <circle cx="55" cy="53" r="32.7" fill="#925E0E"/>
+  <g fill="none" stroke="#FFFFFF" stroke-width="6">
+    <ellipse cx="55" cy="53" rx="13.6" ry="32.7"/>
+    <path d="M22.3 53h65.4"/>
+  </g>
+</svg>
