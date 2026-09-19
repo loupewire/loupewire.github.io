@@ -1,0 +1,76 @@
+/* Legal pages: one reading column, a summary box, a permission table, and a
+   print stylesheet, because a privacy policy is the one page that gets printed. */
+
+.legal {
+  padding-block: var(--loupewire-space-3xl) 0;
+}
+
+.legal__header {
+  max-inline-size: 72ch;
+  margin-block-end: var(--loupewire-space-2xl);
+  padding-block-end: var(--loupewire-space-xl);
+  border-block-end: 1px solid var(--loupewire-border);
+}
+
+.legal__updated {
+  margin-block-start: var(--loupewire-space-md);
+  font-family: var(--loupewire-font-family-mono);
+  font-size: var(--loupewire-font-size-md);
+  color: var(--loupewire-text-muted);
+}
+
+.legal__summary {
+  padding: var(--loupewire-space-lg) var(--loupewire-space-xl);
+  border-inline-start: 3px solid var(--loupewire-brand-accent);
+  border-radius: var(--loupewire-radius-md);
+  background: var(--loupewire-surface);
+}
+
+.prose .legal__summary h2 {
+  margin-block-start: 0;
+  margin-block-end: var(--loupewire-space-sm);
+  font-size: var(--loupewire-font-size-sm);
+  font-weight: var(--loupewire-font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--loupewire-brand-accent-ink);
+}
+
+.legal__summary ul {
+  margin: 0;
+}
+
+.prose th:first-child,
+.prose td:first-child {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .prose th:first-child,
+  .prose td:first-child {
+    white-space: normal;
+  }
+}
+
+@media print {
+  .site-header,
+  .site-footer,
+  .skip-link {
+    display: none;
+  }
+
+  .legal {
+    padding-block: 0;
+  }
+
+  .prose a::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.85em;
+    color: var(--loupewire-text-muted);
+  }
+
+  .prose a[href^='#']::after,
+  .prose a[href^='/']::after {
+    content: '';
+  }
+}
