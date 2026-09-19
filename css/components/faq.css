@@ -1,0 +1,59 @@
+/* FAQ: native <details>, so every item works with no script and the
+   structured data (FAQPage) describes exactly what the page shows. */
+
+.faq__inner > h2 {
+  margin-block-end: var(--loupewire-space-2xl);
+}
+
+.faq__list {
+  max-inline-size: 72ch;
+  border-block-start: 1px solid var(--loupewire-border);
+}
+
+.faq__item {
+  border-block-end: 1px solid var(--loupewire-border);
+}
+
+.faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--loupewire-space-lg);
+  padding-block: var(--loupewire-space-lg);
+  font-size: var(--loupewire-font-size-lg);
+  font-weight: var(--loupewire-font-weight-semibold);
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.faq__question::after {
+  content: '+';
+  flex: none;
+  inline-size: 28px;
+  block-size: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--loupewire-border-strong);
+  border-radius: var(--loupewire-radius-full);
+  font-weight: var(--loupewire-font-weight-normal);
+  color: var(--loupewire-text-muted);
+  transition: transform var(--loupewire-transition-base) var(--loupewire-ease);
+}
+
+.faq__item[open] .faq__question::after {
+  transform: rotate(45deg);
+}
+
+.faq__answer {
+  padding-block: 0 var(--loupewire-space-xl);
+  color: var(--loupewire-text-muted);
+}
+
+.faq__answer p {
+  max-inline-size: 66ch;
+}

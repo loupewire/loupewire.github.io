@@ -1,0 +1,33 @@
+<!--
+  Open Graph / Twitter card image, 1200x630. Same language as the store
+  marquee (docs/store-assets/chrome-web-store-promo/promo-marquee.svg): the
+  mark's plate gradient, the mark, the wordmark, one tagline, the browser
+  line. Rendered to og-image.png by `pnpm run icons`. Text is the copy
+  document's OG section (docs/release/marketing/draft-landing-copy.md).
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="plate" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E8A33D"/>
+      <stop offset="1" stop-color="#925E0E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#plate)"/>
+  <g stroke="#FFFFFF" stroke-opacity=".18" stroke-width="12" stroke-linecap="round">
+    <line x1="96" y1="72" x2="1104" y2="72"/>
+    <line x1="96" y1="558" x2="1104" y2="558"/>
+  </g>
+  <g transform="translate(96 150) scale(1.5)">
+    <circle cx="55" cy="53" r="46" fill="#FFFFFF"/>
+    <path d="M88.5 86.5L104.5 102.5" stroke="#FFFFFF" stroke-width="16" stroke-linecap="round" fill="none"/>
+    <circle cx="55" cy="53" r="32.7" fill="#925E0E"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="6">
+      <ellipse cx="55" cy="53" rx="13.6" ry="32.7"/>
+      <path d="M22.3 53h65.4"/>
+    </g>
+  </g>
+  <text x="300" y="248" font-family="Ubuntu, 'DejaVu Sans', sans-serif" font-size="96" font-weight="700" fill="#FFFFFF" letter-spacing="-1">Loupewire</text>
+  <text x="96" y="392" font-family="Ubuntu, 'DejaVu Sans', sans-serif" font-size="44" font-weight="600" fill="#FFFFFF">Every tab in one window.</text>
+  <text x="96" y="450" font-family="Ubuntu, 'DejaVu Sans', sans-serif" font-size="44" font-weight="600" fill="#FFFFFF">Secrets masked before you share.</text>
+  <text x="96" y="520" font-family="Ubuntu, 'DejaVu Sans', sans-serif" font-size="28" fill="#FFF2DD">For Chrome, Edge &amp; Chromium browsers</text>
+</svg>

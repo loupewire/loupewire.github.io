@@ -1,0 +1,61 @@
+/* Video facade: a poster and a play button until the visitor clicks, then
+   the YouTube iframe takes the same box. Nothing is requested from YouTube
+   before the click. The link inside works with no script at all. */
+
+.video-facade {
+  position: relative;
+  max-inline-size: 960px;
+  margin-inline: auto;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-xl);
+  background: var(--loupewire-surface);
+  box-shadow: var(--loupewire-shadow-lg);
+}
+
+.video-facade__link {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.video-facade__poster {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.video-facade__play {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 80px;
+  block-size: 80px;
+  border-radius: var(--loupewire-radius-full);
+  background: var(--loupewire-brand-primary);
+  color: var(--loupewire-brand-primary-ink);
+  box-shadow: var(--loupewire-shadow-md);
+  transform: translate(-50%, -50%);
+  transition: transform var(--loupewire-transition-base) var(--loupewire-ease);
+}
+
+.video-facade__play svg {
+  margin-inline-start: 4px; /* optical centre of the triangle */
+}
+
+.video-facade__link:hover .video-facade__play,
+.video-facade__link:focus-visible .video-facade__play {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.video-facade iframe {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  border: 0;
+}

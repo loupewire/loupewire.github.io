@@ -1,0 +1,72 @@
+/* Cards: the five workflow steps on the home page and the three support
+   entries. A list, so the numbering is real markup; the grid wraps to one
+   column on narrow screens. */
+
+.cards {
+  display: grid;
+  gap: var(--loupewire-space-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards--steps {
+  /* 190px × 5 plus four 16px gaps is 1014px, inside the 1056px the container
+     leaves after its padding, so the five steps sit in one row on a wide
+     screen; narrower screens wrap to two or one. */
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.cards--three {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--loupewire-space-sm);
+  padding: var(--loupewire-space-xl);
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-lg);
+  background: var(--loupewire-surface);
+  box-shadow: var(--loupewire-shadow-sm);
+}
+
+.card--accent {
+  border-color: var(--loupewire-brand-primary);
+  background: var(--loupewire-brand-primary-subtle);
+}
+
+.card__step {
+  font-family: var(--loupewire-font-family-mono);
+  font-size: var(--loupewire-font-size-sm);
+  font-weight: var(--loupewire-font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--loupewire-accent);
+}
+
+.card__title {
+  font-size: var(--loupewire-display-sm);
+}
+
+.card__body {
+  color: var(--loupewire-text-muted);
+  font-size: var(--loupewire-font-size-md);
+}
+
+.card__link {
+  margin-block-start: auto;
+  padding-block-start: var(--loupewire-space-sm);
+  font-size: var(--loupewire-font-size-md);
+  font-weight: var(--loupewire-font-weight-semibold);
+  text-decoration: none;
+}
+
+.card__link::after {
+  content: ' →';
+}
+
+.card__link:hover {
+  text-decoration: underline;
+}

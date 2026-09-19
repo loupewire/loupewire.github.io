@@ -1,0 +1,214 @@
+/* Home page sections. The hero text follows the theme for full contrast;
+   only the plate behind the screenshot carries the brand gradient, the way
+   the store hero does. */
+
+.hero {
+  padding-block: var(--loupewire-space-4xl) var(--loupewire-section-gap);
+}
+
+.hero__inner {
+  display: grid;
+  gap: var(--loupewire-space-3xl);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+
+.hero__title {
+  margin-block-start: var(--loupewire-space-md);
+  /* One step under display-xl: beside the screenshot the full size broke into six
+     two-word lines. Balanced wrapping stays; the size is what changed. */
+  font-size: clamp(2rem, 1.25rem + 2.4vw, 3rem);
+}
+
+.hero__lead {
+  margin-block-start: var(--loupewire-space-lg);
+  font-size: var(--loupewire-font-size-lg);
+  color: var(--loupewire-text-muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--loupewire-space-md);
+  margin-block-start: var(--loupewire-space-2xl);
+}
+
+.hero__note {
+  margin-block-start: var(--loupewire-space-lg);
+  font-size: var(--loupewire-font-size-md);
+  color: var(--loupewire-text-muted);
+}
+
+.hero__figure {
+  margin: 0;
+}
+
+.hero__frame {
+  padding: clamp(12px, 2.5vw, 28px);
+  border-radius: var(--loupewire-radius-xl);
+  background: var(--loupewire-hero-gradient);
+  box-shadow: var(--loupewire-shadow-lg);
+}
+
+.hero__frame img {
+  border-radius: var(--loupewire-radius-md);
+  box-shadow: var(--loupewire-shadow-md);
+}
+
+/* Differentiators: text beside an image, alternating sides. */
+
+.feature {
+  display: grid;
+  gap: var(--loupewire-space-2xl);
+  align-items: center;
+  padding-block: var(--loupewire-space-3xl);
+  border-block-start: 1px solid var(--loupewire-border);
+}
+
+.feature:first-of-type {
+  border-block-start: 0;
+  padding-block-start: 0;
+}
+
+@media (min-width: 900px) {
+  .feature {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  .feature--reverse {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  }
+
+  .feature--reverse .feature__copy {
+    order: 2;
+  }
+}
+
+.feature__copy > p {
+  margin-block-start: var(--loupewire-space-md);
+  color: var(--loupewire-text-muted);
+}
+
+.feature__figure {
+  margin: 0;
+}
+
+.feature__figure img {
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-lg);
+  box-shadow: var(--loupewire-shadow-md);
+}
+
+.feature__facts {
+  margin: 0;
+  padding: var(--loupewire-space-xl);
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-lg);
+  background: var(--loupewire-surface);
+  list-style: none;
+}
+
+.feature__facts li {
+  position: relative;
+  padding-inline-start: var(--loupewire-space-xl);
+}
+
+.feature__facts li + li {
+  margin-block-start: var(--loupewire-space-md);
+}
+
+.feature__facts li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0.55em;
+  inline-size: 10px;
+  block-size: 10px;
+  border-radius: var(--loupewire-radius-full);
+  background: var(--loupewire-brand-accent);
+}
+
+/* Limits: one framed statement. */
+
+.limits {
+  padding-block: 0;
+}
+
+.limits__box {
+  max-inline-size: 72ch;
+  padding: var(--loupewire-space-2xl);
+  border-inline-start: 3px solid var(--loupewire-status-warning);
+  border-radius: var(--loupewire-radius-md);
+  background: var(--loupewire-surface);
+}
+
+.limits__box > p {
+  margin-block-start: var(--loupewire-space-md);
+  color: var(--loupewire-text-muted);
+}
+
+.limits__box > h2 {
+  margin-block-start: var(--loupewire-space-sm);
+  font-size: var(--loupewire-display-md);
+}
+
+/* Video. */
+
+.video__caption {
+  max-inline-size: 72ch;
+  margin-inline: auto;
+  margin-block-start: var(--loupewire-space-lg);
+  font-size: var(--loupewire-font-size-md);
+  color: var(--loupewire-text-muted);
+  text-align: center;
+}
+
+/* Closing call to action. */
+
+.cta {
+  padding-block-end: 0;
+}
+
+.cta__inner {
+  padding: var(--loupewire-space-4xl) var(--loupewire-container-padding);
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-xl);
+  background: var(--loupewire-surface);
+  text-align: center;
+}
+
+.cta__inner > h2 {
+  max-inline-size: 22ch;
+  margin-inline: auto;
+}
+
+.cta__body {
+  margin-block-start: var(--loupewire-space-lg);
+  color: var(--loupewire-text-muted);
+}
+
+.cta__body kbd {
+  padding: 0.1em 0.4em;
+  border: 1px solid var(--loupewire-border-strong);
+  border-block-end-width: 2px;
+  border-radius: var(--loupewire-radius-sm);
+  background: var(--loupewire-surface-raised);
+  font-size: 0.85em;
+}
+
+.cta__actions {
+  display: flex;
+  justify-content: center;
+  margin-block-start: var(--loupewire-space-2xl);
+}
+
+.cta__note {
+  margin-block-start: var(--loupewire-space-md);
+  font-size: var(--loupewire-font-size-sm);
+  color: var(--loupewire-text-muted);
+}

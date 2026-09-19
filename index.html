@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Loupewire - HTTP Request Inspector for Chrome &amp; Edge</title>
-    <meta name="description" content="Capture traffic from every tab in one window, mask secrets on screen and in export, and attach a HAR that is safe to share. On-device, no account.">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Capture the HTTP traffic of every tab in one window, mask secrets on screen and in the file, and export a HAR that is safe to attach. On-device, no account.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://loupewire.github.io/">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://loupewire.github.io/">
     <meta property="og:title" content="Loupewire - HTTP Request Inspector for Chrome &amp; Edge">
-    <meta property="og:description" content="Capture traffic from every tab in one window, mask secrets on screen and in export, and attach a HAR that is safe to share. On-device, no account.">
+    <meta property="og:description" content="Capture the HTTP traffic of every tab in one window, mask secrets on screen and in the file, and export a HAR that is safe to attach. On-device, no account.">
     <meta property="og:image" content="https://loupewire.github.io/assets/brand/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -18,7 +19,7 @@
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Loupewire - HTTP Request Inspector for Chrome &amp; Edge">
-    <meta name="twitter:description" content="Capture traffic from every tab in one window, mask secrets on screen and in export, and attach a HAR that is safe to share. On-device, no account.">
+    <meta name="twitter:description" content="Capture the HTTP traffic of every tab in one window, mask secrets on screen and in the file, and export a HAR that is safe to attach. On-device, no account.">
     <meta name="twitter:image" content="https://loupewire.github.io/assets/brand/og-image.png">
 
     <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
@@ -53,7 +54,66 @@
     <link rel="stylesheet" href="/css/components/header.css">
     <link rel="stylesheet" href="/css/components/footer.css">
     <link rel="stylesheet" href="/css/components/buttons.css">
-    <link rel="stylesheet" href="/css/pages/404.css">
+    <link rel="stylesheet" href="/css/components/cards.css">
+    <link rel="stylesheet" href="/css/components/faq.css">
+    <link rel="stylesheet" href="/css/components/video-facade.css">
+    <link rel="stylesheet" href="/css/pages/index.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://loupewire.github.io/#organization",
+          "name": "Loupewire",
+          "url": "https://loupewire.github.io/",
+          "logo": "https://loupewire.github.io/assets/brand/favicon-512.png",
+          "sameAs": ["https://github.com/loupewire"]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://loupewire.github.io/#website",
+          "url": "https://loupewire.github.io/",
+          "name": "Loupewire",
+          "publisher": { "@id": "https://loupewire.github.io/#organization" },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://loupewire.github.io/#software",
+          "name": "Loupewire: HTTP Request Inspector, Header Editor and Masked HAR Export",
+          "alternateName": "Loupewire",
+          "url": "https://loupewire.github.io/",
+          "applicationCategory": "DeveloperApplication",
+          "applicationSubCategory": "BrowserApplication",
+          "operatingSystem": "Chrome, Microsoft Edge, Brave and other Chromium browsers on Windows, macOS and Linux",
+          "description": "Capture the HTTP traffic of every tab in one window, mask secrets on screen and in the file, and export a HAR that is safe to attach. On-device, no account.",
+          "image": "https://loupewire.github.io/assets/brand/og-image.png",
+          "screenshot": "https://loupewire.github.io/assets/screenshots/01-hero.webp",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "publisher": { "@id": "https://loupewire.github.io/#organization" }
+        },
+        {
+          "@type": "VideoObject",
+          "@id": "https://loupewire.github.io/#intro-video",
+          "name": "Attach a HAR to a ticket without leaking tokens",
+          "description": "Loupewire captures HTTP traffic from every tab in one window, masks secrets on screen and in the file, and exports a HAR you can attach to a ticket.",
+          "thumbnailUrl": "https://loupewire.github.io/assets/video/intro-poster.jpg",
+          "uploadDate": "2026-09-20",
+          "duration": "PT36S",
+          "contentUrl": "https://www.youtube.com/watch?v=u64uJKa-xT4",
+          "embedUrl": "https://www.youtube-nocookie.com/embed/u64uJKa-xT4",
+          "publisher": { "@id": "https://loupewire.github.io/#organization" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://loupewire.github.io/" }
+          ]
+        }
+      ]
+    }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE3C1NP6GV"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -101,12 +161,181 @@
       </div>
     </header>
     <main id="main" class="site-main">
-      <section class="container not-found">
-        <p class="not-found__code">Coming soon</p>
-        <h1 class="not-found__title">Loupewire</h1>
-        <p class="not-found__text">HTTP request inspector, header editor and masked HAR export for Chrome, Edge & Chromium browsers. This page is being built; the extension is on its way to the Chrome Web Store.</p>
-        <div class="not-found__actions">
-          <a class="btn btn--secondary" href="https://github.com/loupewire" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <section id="hero" class="hero">
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <p class="section__eyebrow">For Chrome, Edge &amp; Chromium browsers</p>
+            <h1 class="hero__title">See what the browser did, then prove it without leaking a token</h1>
+            <p class="hero__lead">Loupewire captures the HTTP traffic of every tab in one window, masks secrets on screen and in the file, and exports a HAR you can attach to a ticket. Nothing leaves your device.</p>
+            <div class="hero__actions">
+              <span class="btn btn--primary btn--lg" aria-disabled="true" data-cta="hero">Coming soon</span>
+              <a class="btn btn--secondary btn--lg" href="#video">Watch the 36-second intro</a>
+            </div>
+            <p class="hero__note">No account. No telemetry. Captured traffic never leaves the browser.</p>
+          </div>
+          <figure class="hero__figure">
+            <div class="hero__frame">
+              <img src="/assets/screenshots/02-headers-masked.webp" width="1280" height="720" alt="The Loupewire tracker window listing requests from several hosts, with the Authorization header masked in the detail panel" fetchpriority="high">
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section id="workflow" class="section workflow">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">From bug reproduced to ticket attached</p>
+            <h2>One window for the whole path</h2>
+            <p class="section__lead">A bug report has five steps. Loupewire lands on each one, and the fourth is the reason it exists.</p>
+          </header>
+          <ol class="cards cards--steps">
+            <li class="card">
+              <p class="card__step">1 · Reproduce</p>
+              <h3 class="card__title">Set up the request</h3>
+              <p class="card__body">Add or set a request header for every URL that matches a pattern: a token for staging, a feature flag, a tenant. Block an endpoint to see how the page copes without it.</p>
+              <a class="card__link" href="/guides/header-rules/">How header rules work</a>
+            </li>
+            <li class="card">
+              <p class="card__step">2 · Observe</p>
+              <h3 class="card__title">See the whole flow</h3>
+              <p class="card__body">Every tab, popup and redirect lands in one table. A login that bounces through three hosts reads as one list, not three DevTools windows.</p>
+            </li>
+            <li class="card">
+              <p class="card__step">3 · Isolate</p>
+              <h3 class="card__title">Find the failing request</h3>
+              <p class="card__body">Track or skip URLs while capturing. Filter by URL, method, status, date and cache state with <code>&amp;</code> and <code>|</code>. Pause, find text inside a request, clear the noise.</p>
+            </li>
+            <li class="card card--accent">
+              <p class="card__step">4 · Evidence</p>
+              <h3 class="card__title">Hide the secrets, keep the proof</h3>
+              <p class="card__body">Tokens and cookies are masked before they reach the screen and before they reach the file. Export the capture, the filtered rows or the selection as HAR or JSON.</p>
+            </li>
+            <li class="card">
+              <p class="card__step">5 · Return</p>
+              <h3 class="card__title">Pick up where you left off</h3>
+              <p class="card__body">Saved sessions and environment profiles are on the way, so tomorrow's ticket starts from today's setup.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="why" class="section why">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">Why Loupewire</p>
+            <h2>Masked before the file exists</h2>
+          </header>
+          <div class="feature">
+            <div class="feature__copy">
+              <h3>Masking at the source</h3>
+              <p>A HAR file is a credential: the tokens inside it are live. Sanitizers clean a file after it exists. Loupewire masks values on screen and in every export before a file exists, so a screenshot and a HAR are both safe to attach without a second pass. A built-in preset covers the usual secret-bearing headers and cookies out of the box.</p>
+            </div>
+            <figure class="feature__figure">
+              <img src="/assets/screenshots/04-export-masked.webp" width="1280" height="720" alt="The export dialog with masking on and the selected rows about to be written to a HAR file" loading="lazy">
+            </figure>
+          </div>
+          <div class="feature feature--reverse">
+            <div class="feature__copy">
+              <h3>Every tab in one window</h3>
+              <p>DevTools is per tab and forgets on navigation unless you remember to preserve the log. Flows that cross tabs, such as SSO, OAuth, 3-D Secure and vendor checkout, are exactly the ones you are asked to document. Loupewire records all of them in one tracker window you can leave open all day.</p>
+            </div>
+            <figure class="feature__figure">
+              <img src="/assets/video/intro-poster.jpg" width="1280" height="720" alt="The tracker table filling with requests to app, api, cdn and auth hosts of one site" loading="lazy">
+            </figure>
+          </div>
+          <div class="feature">
+            <div class="feature__copy">
+              <h3>On your device, and only there</h3>
+              <p>Everything runs in the browser. Captured headers, cookies, bodies and URLs stay in the tracker window and are never written to disk unless you export them. The extension makes no network requests of its own. No telemetry, no analytics, no crash reporting, no account.</p>
+            </div>
+            <ul class="feature__facts">
+              <li>Captured traffic lives in the tracker window's memory and is gone when it closes</li>
+              <li>Your patterns, rules and settings stay in the browser's local extension storage</li>
+              <li>Nothing is injected into the pages you visit</li>
+              <li>The <a href="/privacy-policy/">privacy policy</a> says the same thing in more words</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="limits" class="section limits">
+        <div class="container">
+          <div class="limits__box">
+            <p class="section__eyebrow">Honest limits</p>
+            <h2>No response bodies, on purpose</h2>
+            <p>Exports contain request and response headers, cookies, request bodies, timing and redirects. They do not contain response bodies. The browser API this extension uses to observe traffic does not expose them, and Loupewire does not attach a debugger to your tabs to get them. For response bodies, use DevTools alongside Loupewire.</p>
+            <p>Loupewire also composes no requests and injects nothing into the pages you visit. It observes and edits what the browser sends on its own, and it stands next to DevTools rather than replacing it.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="video" class="section video">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">36 seconds, no narration</p>
+            <h2>Attach a HAR to a ticket without leaking tokens</h2>
+          </header>
+          <div class="video-facade" data-video-facade data-youtube-id="u64uJKa-xT4">
+            <a class="video-facade__link" href="https://www.youtube.com/watch?v=u64uJKa-xT4" target="_blank" rel="noopener noreferrer">
+              <img class="video-facade__poster" src="/assets/video/intro-poster.jpg" width="1280" height="720" alt="" loading="lazy">
+              <span class="video-facade__play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="32" height="32"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              </span>
+              <span class="visually-hidden">Play the intro video</span>
+            </a>
+          </div>
+          <p class="video__caption">Every tab in one window, a token masked before it reaches the screen, a HAR with the masking baked in, a header rule applied to live traffic, a redacted cURL on the clipboard. The traffic comes from a local server; nothing in frame is anyone's real data.</p>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="container faq__inner">
+          <h2>Questions people ask first</h2>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">Is it free?</summary>
+              <div class="faq__answer"><p>Yes. Every feature is available today with no account and no sign-up. A paid tier that removes limits on volume and convenience may come later; masking, export and capture stay available on the free tier.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Does it show response bodies?</summary>
+              <div class="faq__answer"><p>No. The browser API that makes all-tab capture possible never exposes them. Tools that show bodies attach a debugger to each tab or inject scripts into pages; Loupewire does neither. Use DevTools alongside it for a body.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Does anything leave my machine?</summary>
+              <div class="faq__answer"><p>Nothing from the extension. It makes no network requests of its own. This website uses Google Analytics to count visits; the extension does not, and the <a href="/privacy-policy/">privacy policy</a> keeps the two apart.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Which browsers?</summary>
+              <div class="faq__answer"><p>Chrome, Edge and other Chromium browsers.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How is it different from DevTools?</summary>
+              <div class="faq__answer"><p>DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for response bodies and the console, Loupewire for the evidence you attach.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Can I use it on a company laptop?</summary>
+              <div class="faq__answer"><p>That is what it is for. It needs no system proxy, no root certificate and no admin rights, only the extension permissions the store shows you. Follow your employer's policy on what you attach to tickets.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">What does &quot;masked&quot; mean, exactly?</summary>
+              <div class="faq__answer"><p>A masked value shows its first and last characters and hides the rest, on screen and in every export. Masking is a display transform; the extension keeps no copy of the value anywhere.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Where do I report a bug or ask a question?</summary>
+              <div class="faq__answer"><p>In the public <a href="https://github.com/loupewire/loupewire-support" target="_blank" rel="noopener noreferrer">loupewire-support</a> repository on GitHub. Attach a masked export, say which browser and version, and describe what you expected.</p></div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="install" class="section cta">
+        <div class="container cta__inner">
+          <h2>The next ticket can carry the evidence without the credentials</h2>
+          <p class="cta__body">Install Loupewire, open the tracker with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd>, and export.</p>
+          <div class="cta__actions">
+            <span class="btn btn--primary btn--lg" aria-disabled="true" data-cta="cta">Coming soon</span>
+          </div>
+          <p class="cta__note">For Chrome, Edge &amp; Chromium browsers</p>
         </div>
       </section>
 
@@ -147,7 +376,11 @@
         <p>&copy; 2026 Loupewire. For Chrome, Edge &amp; Chromium browsers.</p>
       </div>
     </footer>
+    <script src="/js/utils/analytics.js" defer></script>
+    <script src="/js/utils/browser-detect.js" defer></script>
     <script src="/js/utils/theme-toggle.js" defer></script>
     <script src="/js/utils/nav-toggle.js" defer></script>
+    <script src="/js/components/video-facade.js" defer></script>
+    <script src="/js/pages/index.js" defer></script>
   </body>
 </html>

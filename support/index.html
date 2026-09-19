@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" data-loupewire-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Support - Loupewire</title>
+    <meta name="description" content="Report a bug, ask a question or read the guides. Loupewire support happens in public on GitHub.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://loupewire.github.io/support/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://loupewire.github.io/support/">
+    <meta property="og:title" content="Support - Loupewire">
+    <meta property="og:description" content="Report a bug, ask a question or read the guides. Loupewire support happens in public on GitHub.">
+    <meta property="og:image" content="https://loupewire.github.io/assets/brand/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Loupewire">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Support - Loupewire">
+    <meta name="twitter:description" content="Report a bug, ask a question or read the guides. Loupewire support happens in public on GitHub.">
+    <meta name="twitter:image" content="https://loupewire.github.io/assets/brand/og-image.png">
+
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/brand/mark.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/brand/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#fafaf8">
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add('js');
+        var stored = null;
+        try {
+          stored = window.localStorage.getItem('loupewire-site-theme');
+        } catch (error) {
+          stored = null;
+        }
+        if (stored === 'light' || stored === 'dark') {
+          root.setAttribute('data-loupewire-theme', stored);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/css/tokens.css">
+    <link rel="stylesheet" href="/css/site-tokens.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/buttons.css">
+    <link rel="stylesheet" href="/css/components/cards.css">
+    <link rel="stylesheet" href="/css/components/faq.css">
+    <link rel="stylesheet" href="/css/pages/support.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FAQPage",
+          "@id": "https://loupewire.github.io/support/#faq",
+          "mainEntity": [{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every feature is available today with no account and no sign-up. A paid tier that removes limits on volume and convenience may come later; masking, export and capture stay available on the free tier."}},{"@type":"Question","name":"Does it show response bodies?","acceptedAnswer":{"@type":"Answer","text":"No. The browser API that makes all-tab capture possible never exposes them. Tools that show bodies attach a debugger to each tab or inject scripts into pages; Loupewire does neither. Use DevTools alongside it for a body."}},{"@type":"Question","name":"Does anything leave my machine?","acceptedAnswer":{"@type":"Answer","text":"Nothing from the extension. It makes no network requests of its own. This website uses Google Analytics to count visits; the extension does not, and the privacy policy keeps the two apart."}},{"@type":"Question","name":"Which browsers?","acceptedAnswer":{"@type":"Answer","text":"Chrome, Edge and other Chromium browsers."}},{"@type":"Question","name":"How is it different from DevTools?","acceptedAnswer":{"@type":"Answer","text":"DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for response bodies and the console, Loupewire for the evidence you attach."}},{"@type":"Question","name":"Can I use it on a company laptop?","acceptedAnswer":{"@type":"Answer","text":"That is what it is for. It needs no system proxy, no root certificate and no admin rights, only the extension permissions the store shows you. Follow your employer's policy on what you attach to tickets."}},{"@type":"Question","name":"What does \"masked\" mean, exactly?","acceptedAnswer":{"@type":"Answer","text":"A masked value shows its first and last characters and hides the rest, on screen and in every export. Masking is a display transform; the extension keeps no copy of the value anywhere."}},{"@type":"Question","name":"Where do I report a bug or ask a question?","acceptedAnswer":{"@type":"Answer","text":"In the public loupewire-support repository on GitHub. Attach a masked export, say which browser and version, and describe what you expected."}}]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://loupewire.github.io/" },
+            { "@type": "ListItem", "position": 2, "name": "Support", "item": "https://loupewire.github.io/support/" }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE3C1NP6GV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-SE3C1NP6GV');
+    </script>
+  </head>
+  <body class="page page--support">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="/">
+          <img src="/assets/brand/mark.svg" alt="" width="28" height="28">
+          <span>Loupewire</span>
+        </a>
+        <button class="site-header__menu" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="visually-hidden">Menu</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+            <path class="site-header__menu-open" d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path class="site-header__menu-close" d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="/guides/">Guides</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="/support/">Support</a></li>
+          </ul>
+          <div class="site-nav__actions">
+            <button class="theme-toggle" type="button" aria-pressed="false" title="Switch theme" data-theme-toggle>
+              <span class="visually-hidden">Switch to light theme</span>
+              <svg class="theme-toggle__sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <svg class="theme-toggle__moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <span class="btn btn--primary" aria-disabled="true" data-cta="navbar">Coming soon</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="site-main">
+      <section class="section support">
+        <div class="container">
+          <header class="section__header">
+            <h1>Support</h1>
+            <p class="section__lead">Loupewire support happens in public, on GitHub. Bugs and questions get answered in the same place, so the next person with the same problem finds the answer.</p>
+          </header>
+          <ul class="cards cards--three">
+            <li class="card card--link">
+              <h2 class="card__title">Report a bug</h2>
+              <p class="card__body">Something captured wrong, a rule that did not apply, an export that a viewer could not read. Open an issue.</p>
+              <a class="card__link" href="https://github.com/loupewire/loupewire-support/issues/new/choose" target="_blank" rel="noopener noreferrer">Open an issue on GitHub</a>
+            </li>
+            <li class="card card--link">
+              <h2 class="card__title">Ask a question</h2>
+              <p class="card__body">Not sure whether it can do something, or how. Start a discussion.</p>
+              <a class="card__link" href="https://github.com/loupewire/loupewire-support/discussions" target="_blank" rel="noopener noreferrer">Start a discussion</a>
+            </li>
+            <li class="card card--link">
+              <h2 class="card__title">Read the guides</h2>
+              <p class="card__body">Step-by-step walkthroughs of header rules and the other features.</p>
+              <a class="card__link" href="/guides/">Browse the guides</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section support__include">
+        <div class="container">
+          <div class="prose">
+          <h2>What makes a report easy to act on</h2>
+          <ul>
+            <li>Your browser and its version (Chrome, Edge, Brave), and the Loupewire version from the options page.</li>
+            <li>What you did, what you expected, what happened instead.</li>
+            <li>A masked export of the capture, if it helps. Check it before attaching: the export is masked, the issue tracker is public.</li>
+            <li>A screenshot of the tracker window, with the masking on.</li>
+          </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="section faq">
+        <div class="container faq__inner">
+          <h2>Questions people ask first</h2>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">Is it free?</summary>
+              <div class="faq__answer"><p>Yes. Every feature is available today with no account and no sign-up. A paid tier that removes limits on volume and convenience may come later; masking, export and capture stay available on the free tier.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Does it show response bodies?</summary>
+              <div class="faq__answer"><p>No. The browser API that makes all-tab capture possible never exposes them. Tools that show bodies attach a debugger to each tab or inject scripts into pages; Loupewire does neither. Use DevTools alongside it for a body.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Does anything leave my machine?</summary>
+              <div class="faq__answer"><p>Nothing from the extension. It makes no network requests of its own. This website uses Google Analytics to count visits; the extension does not, and the <a href="/privacy-policy/">privacy policy</a> keeps the two apart.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Which browsers?</summary>
+              <div class="faq__answer"><p>Chrome, Edge and other Chromium browsers.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How is it different from DevTools?</summary>
+              <div class="faq__answer"><p>DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for response bodies and the console, Loupewire for the evidence you attach.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Can I use it on a company laptop?</summary>
+              <div class="faq__answer"><p>That is what it is for. It needs no system proxy, no root certificate and no admin rights, only the extension permissions the store shows you. Follow your employer's policy on what you attach to tickets.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">What does &quot;masked&quot; mean, exactly?</summary>
+              <div class="faq__answer"><p>A masked value shows its first and last characters and hides the rest, on screen and in every export. Masking is a display transform; the extension keeps no copy of the value anywhere.</p></div>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Where do I report a bug or ask a question?</summary>
+              <div class="faq__answer"><p>In the public <a href="https://github.com/loupewire/loupewire-support" target="_blank" rel="noopener noreferrer">loupewire-support</a> repository on GitHub. Attach a masked export, say which browser and version, and describe what you expected.</p></div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="/">
+            <img src="/assets/brand/mark.svg" alt="" width="32" height="32">
+            <span>Loupewire</span>
+          </a>
+          <p class="site-footer__tagline">HTTP request inspector, header editor and masked HAR export for Chrome, Edge & Chromium browsers</p>
+          <p class="site-footer__promise">Everything the extension captures stays on your device. No account, no telemetry.</p>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Product</h2>
+          <ul class="site-footer__links">
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/support/">Support</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Legal</h2>
+          <ul class="site-footer__links">
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Community</h2>
+          <ul class="site-footer__links">
+            <li><a href="https://github.com/loupewire" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/loupewire/loupewire-support/issues" target="_blank" rel="noopener noreferrer">Report a bug</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>&copy; 2026 Loupewire. For Chrome, Edge &amp; Chromium browsers.</p>
+      </div>
+    </footer>
+    <script src="/js/utils/analytics.js" defer></script>
+    <script src="/js/utils/browser-detect.js" defer></script>
+    <script src="/js/utils/theme-toggle.js" defer></script>
+    <script src="/js/utils/nav-toggle.js" defer></script>
+  </body>
+</html>
