@@ -1,7 +1,11 @@
 /* Legal pages: one reading column, a summary box, a permission table, and a
    print stylesheet, because a privacy policy is the one page that gets printed. */
 
+/* The reading column is centred, not anchored to the container's left edge:
+   the container is sized for the home page's two-column sections, and a
+   72ch column inside it read as lopsided on a wide screen. */
 .legal {
+  max-inline-size: calc(72ch + 2 * var(--loupewire-container-padding));
   padding-block: var(--loupewire-space-3xl) 0;
 }
 
