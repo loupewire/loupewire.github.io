@@ -10,6 +10,10 @@
   // On a phone the sidebar starts closed so the article is the first thing
   // on screen; on a wide screen it is always open, because the summary is
   // hidden and a closed <details> would hide the list with no way to open it.
+  //
+  // The initial close happens in an inline script beside the markup, before
+  // first paint. This function is what keeps the state right afterwards, when
+  // the viewport crosses the breakpoint.
   function syncSidebar() {
     if (!nav) return;
     if (wide.matches) {

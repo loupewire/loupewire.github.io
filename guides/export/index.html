@@ -178,6 +178,17 @@
               <li><a href="/guides/export/" aria-current="page">Export and copy</a></li>
             </ul>
           </details>
+          <script>
+            /* Closed before first paint on a phone, not after load by guide.js: with
+               eight guides the open list is most of a phone screen, and collapsing it
+               once the article had been painted moved the whole article up. Measured
+               2026-09-20 (ROADMAP 2.2): CLS 0.323 on a guide, against 0.05 when the
+               list had two entries. The markup stays `open`, so a reader with no
+               JavaScript still gets a usable list. */
+            if (!window.matchMedia('(min-width: 960px)').matches) {
+              document.currentScript.previousElementSibling.removeAttribute('open');
+            }
+          </script>
         </aside>
         <article class="guide__article">
           <nav class="guide__breadcrumb" aria-label="Breadcrumb">
