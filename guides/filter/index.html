@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en" data-loupewire-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filter the table - Loupewire guides</title>
+    <meta name="description" content="One input, five fields and two operators. The filter hides rows and never removes them, which is what makes it the safe way to narrow a capture.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://loupewire.github.io/guides/filter/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://loupewire.github.io/guides/filter/">
+    <meta property="og:title" content="Filter the table - Loupewire guides">
+    <meta property="og:description" content="One input, five fields and two operators. The filter hides rows and never removes them, which is what makes it the safe way to narrow a capture.">
+    <meta property="og:image" content="https://loupewire.github.io/assets/brand/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Loupewire">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Filter the table - Loupewire guides">
+    <meta name="twitter:description" content="One input, five fields and two operators. The filter hides rows and never removes them, which is what makes it the safe way to narrow a capture.">
+    <meta name="twitter:image" content="https://loupewire.github.io/assets/brand/og-image.png">
+
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/brand/mark.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/brand/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#fafaf8">
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add('js');
+        var stored = null;
+        try {
+          stored = window.localStorage.getItem('loupewire-site-theme');
+        } catch (error) {
+          stored = null;
+        }
+        if (stored === 'light' || stored === 'dark') {
+          root.setAttribute('data-loupewire-theme', stored);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/css/tokens.css">
+    <link rel="stylesheet" href="/css/site-tokens.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/buttons.css">
+    <link rel="stylesheet" href="/css/pages/guide.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://loupewire.github.io/#organization",
+          "name": "Loupewire",
+          "url": "https://loupewire.github.io/",
+          "logo": "https://loupewire.github.io/assets/brand/favicon-512.png"
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://loupewire.github.io/guides/filter/#article",
+          "headline": "Filter the table",
+          "description": "One input, five fields and two operators. The filter hides rows and never removes them, which is what makes it the safe way to narrow a capture.",
+          "url": "https://loupewire.github.io/guides/filter/",
+          "datePublished": "2026-09-20T00:00:00+07:00",
+          "dateModified": "2026-09-20T00:00:00+07:00",
+          "inLanguage": "en-US",
+          "author": {
+            "@id": "https://loupewire.github.io/#organization"
+          },
+          "publisher": {
+            "@id": "https://loupewire.github.io/#organization"
+          },
+          "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://loupewire.github.io/#software",
+            "name": "Loupewire",
+            "url": "https://loupewire.github.io/"
+          },
+          "image": "https://loupewire.github.io/assets/guides/filter/01-filter-bar.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://loupewire.github.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Guides",
+              "item": "https://loupewire.github.io/guides/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Filter the table",
+              "item": "https://loupewire.github.io/guides/filter/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE3C1NP6GV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-SE3C1NP6GV');
+    </script>
+  </head>
+  <body class="page page--guide page--guide-filter">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="/">
+          <img src="/assets/brand/mark.svg" alt="" width="28" height="28">
+          <span>Loupewire</span>
+        </a>
+        <button class="site-header__menu" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="visually-hidden">Menu</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+            <path class="site-header__menu-open" d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path class="site-header__menu-close" d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="/guides/">Guides</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="/support/">Support</a></li>
+          </ul>
+          <div class="site-nav__actions">
+            <button class="theme-toggle" type="button" aria-pressed="false" title="Switch theme" data-theme-toggle>
+              <span class="visually-hidden">Switch to light theme</span>
+              <svg class="theme-toggle__sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <svg class="theme-toggle__moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <span class="btn btn--primary" aria-disabled="true" data-cta="navbar">Coming soon</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="site-main">
+      <div class="container guide">
+        <aside class="guide__sidebar">
+          <details class="guide-nav" open data-guide-nav>
+            <summary class="guide-nav__summary">All guides</summary>
+            <p class="guide-nav__title">Guides</p>
+            <ul class="guide-nav__list">
+              <li><a href="/guides/first-capture/">Start here: your first capture</a></li>
+              <li><a href="/guides/patterns/">Patterns: one rule, four places</a></li>
+              <li><a href="/guides/track-and-skip/">Track and Skip</a></li>
+              <li><a href="/guides/filter/" aria-current="page">Filter the table</a></li>
+              <li><a href="/guides/header-rules/">Request header rules</a></li>
+            </ul>
+          </details>
+        </aside>
+        <article class="guide__article">
+          <nav class="guide__breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/guides/">Guides</a></li>
+              <li aria-current="page">Filter the table</li>
+            </ol>
+          </nav>
+          <header class="guide__header">
+            <h1>Filter the table</h1>
+            <p class="guide__lead">One input, five fields and two operators. The filter hides rows and never removes them, which is what makes it the safe way to narrow a capture.</p>
+            <p class="guide__updated">Updated <time datetime="2026-09-20">2026-09-20</time></p>
+          </header>
+          <nav class="guide__toc" aria-labelledby="toc-title">
+            <p class="guide__toc-title" id="toc-title">On this page</p>
+            <ol>
+              <li><a href="#the-query-language">The query language</a></li>
+              <li><a href="#two-operators">Two operators</a></li>
+              <li><a href="#when-nothing-matches">When nothing matches</a></li>
+              <li><a href="#the-filter-and-your-export">The filter and your export</a></li>
+              <li><a href="#common-mistakes">Common mistakes</a></li>
+              <li><a href="#not-in-this-version">Not in this version</a></li>
+            </ol>
+          </nav>
+          <div class="prose guide__body">
+            <p>The filter bar sits above the request table and narrows what you are looking at. It <strong>hides rows; it
+            never removes them.</strong> Clear the box and everything comes back, including the rows that arrived while
+            the filter was on. That is the difference between it and <a href="/guides/track-and-skip/">Skip</a>, and it is
+            the reason to reach for the filter while you are still working out what you are looking for.</p>
+            <h2 id="the-query-language">The query language</h2>
+            <p>A <strong>term</strong> is <code>field:value</code>. A bare word is a URL term, so typing <code>payments</code> means
+            <code>url:payments</code>.</p>
+            <p>Five fields:</p>
+            <table>
+            <thead>
+            <tr>
+            <th>Field</th>
+            <th>Matches</th>
+            <th>Example</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><code>url:</code></td>
+            <td>anywhere in the URL</td>
+            <td><code>url:/v2/orders</code></td>
+            </tr>
+            <tr>
+            <td><code>method:</code></td>
+            <td>the method</td>
+            <td><code>method:POST</code></td>
+            </tr>
+            <tr>
+            <td><code>status:</code></td>
+            <td>the status, or a class</td>
+            <td><code>status:404</code>, <code>status:2xx</code></td>
+            </tr>
+            <tr>
+            <td><code>date:</code></td>
+            <td>the time shown in the TIME column</td>
+            <td><code>date:13:59</code></td>
+            </tr>
+            <tr>
+            <td><code>cache:</code></td>
+            <td>whether it was served from cache</td>
+            <td><code>cache:yes</code></td>
+            </tr>
+            </tbody>
+            </table>
+            <figure class="guide__figure"><img src="/assets/guides/filter/01-filter-bar.webp" alt="The filter bar reading url colon slash v2 slash orders, four rows shown, and the count 4 of 17 beside the box" width="1280" height="720" loading="lazy"><figcaption>One term, and the count beside the box: 4 of 17. The other thirteen rows are hidden, not gone.</figcaption></figure>
+            <p>Values are case-insensitive substrings of <strong>the text the table shows</strong>, which is why <code>date:</code> matches
+            what you can read in the TIME column rather than some internal timestamp.</p>
+            <h2 id="two-operators">Two operators</h2>
+            <p><code>&amp;</code> is AND, <code>|</code> is OR, and <code>&amp;</code> binds tighter — <code>a | b &amp; c</code> means <code>a | (b &amp; c)</code>, the same rule as
+            every language you already know. There are no parentheses and no negation.</p>
+            <figure class="guide__figure"><img src="/assets/guides/filter/02-status-shorthand.webp" alt="The filter bar reading status colon 2xx with fourteen of seventeen rows shown, statuses 200, 201 and 202 among them" width="1280" height="720" loading="lazy"><figcaption>status:2xx takes the whole class: 200, 201 and 202 all match.</figcaption></figure><figure class="guide__figure"><img src="/assets/guides/filter/03-combined.webp" alt="The filter bar reading status colon 404 pipe method colon POST, showing three POST rows and one 404" width="1280" height="720" loading="lazy"><figcaption>Two terms joined by |: every POST, plus the one 404.</figcaption></figure>
+            <h2 id="when-nothing-matches">When nothing matches</h2>
+            <p>An empty table means one of three different things, and the message says which:</p>
+            <ul>
+            <li><strong>&quot;No requests captured.&quot;</strong> — nothing has arrived yet.</li>
+            <li><strong>&quot;No request matches this filter.&quot;</strong> — rows exist, this query excludes them.</li>
+            <li><strong>&quot;Capture is paused.&quot;</strong> — recording is off.</li>
+            </ul>
+            <figure class="guide__figure"><img src="/assets/guides/filter/04-empty-filtered.webp" alt="The table empty under a filter for a host that was never called, the count reading 0 of 17 and the message No request matches this filter" width="1280" height="720" loading="lazy"><figcaption>Not an empty capture: 0 of 17, and a message that says which of the two this is.</figcaption></figure>
+            <p>Reading the first message when the second is true is how people conclude that capture is broken, so
+            the product never collapses them into one.</p>
+            <p>Two more behaviours worth knowing:</p>
+            <ul>
+            <li><strong>A half-typed query changes nothing.</strong> If the filter cannot be parsed, the table stays exactly as
+            it was rather than emptying — an unparseable expression is a fact about your typing, not about the
+            traffic.</li>
+            <li><strong>An unknown value matches nothing.</strong> A request still in flight has no status yet, so it fails
+            <code>status:200</code>, <code>status:2xx</code> and <code>status:0</code> alike. &quot;Not known yet&quot; is not zero.</li>
+            </ul>
+            <h2 id="the-filter-and-your-export">The filter and your export</h2>
+            <p>The filter is not only a view. When you export, one of the scopes is <strong>the rows the table is showing
+            now</strong> — so filtering down to the five requests that matter and exporting that is a two-step job. The
+            file records that it holds a subset, so nobody reads it as a whole session.</p>
+            <p>The same goes for Clear: &quot;Clear shown&quot; removes exactly the rows the filter is displaying at the
+            moment you press it.</p>
+            <h2 id="common-mistakes">Common mistakes</h2>
+            <ul>
+            <li><strong>Expecting <code>!</code> or parentheses.</strong> Neither exists. A half-rich syntax is harder to predict than a
+            small one; if you need &quot;everything except&quot;, use Skip — with its cost — or narrow the query from
+            the other side.</li>
+            <li><strong><code>method:</code> with nothing after it.</strong> That is an error, not &quot;any method&quot;. Matching everything would
+            hide the typo behind a full table.</li>
+            <li><strong>Assuming the filter reduces memory.</strong> It does not. Every hidden row is still in the buffer, and
+            still counts toward the window's ceiling. Clear is what frees rows.</li>
+            <li><strong>Expecting the filter to survive.</strong> It is not stored anywhere: close the window and it is gone,
+            along with everything else in it.</li>
+            </ul>
+            <h2 id="not-in-this-version">Not in this version</h2>
+            <p>Parentheses, negation, regular expressions and remembering a filter across sessions are all on the
+            roadmap or deliberately left out; the guide on <a href="/guides/patterns/">patterns</a> says which is which for
+            matching itself.</p>
+
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="/">
+            <img src="/assets/brand/mark.svg" alt="" width="32" height="32">
+            <span>Loupewire</span>
+          </a>
+          <p class="site-footer__tagline">HTTP request inspector, header editor and masked HAR export for Chrome, Edge & Chromium browsers</p>
+          <p class="site-footer__promise">Everything the extension captures stays on your device. No account, no telemetry.</p>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Product</h2>
+          <ul class="site-footer__links">
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/support/">Support</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Legal</h2>
+          <ul class="site-footer__links">
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Community</h2>
+          <ul class="site-footer__links">
+            <li><a href="https://github.com/loupewire" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/loupewire/loupewire-support/issues" target="_blank" rel="noopener noreferrer">Report a bug</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>&copy; 2026 Loupewire. For Chrome, Edge &amp; Chromium browsers.</p>
+      </div>
+    </footer>
+    <script src="/js/utils/analytics.js" defer></script>
+    <script src="/js/utils/browser-detect.js" defer></script>
+    <script src="/js/utils/theme-toggle.js" defer></script>
+    <script src="/js/utils/nav-toggle.js" defer></script>
+    <script src="/js/pages/guide.js" defer></script>
+  </body>
+</html>
