@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en" data-loupewire-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Patterns: one rule, four places - Loupewire guides</title>
+    <meta name="description" content="Track, Skip, Block and Mask all take a pattern and do four different things with it. One matching rule, and the differences that decide what you see.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://loupewire.github.io/guides/patterns/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://loupewire.github.io/guides/patterns/">
+    <meta property="og:title" content="Patterns: one rule, four places - Loupewire guides">
+    <meta property="og:description" content="Track, Skip, Block and Mask all take a pattern and do four different things with it. One matching rule, and the differences that decide what you see.">
+    <meta property="og:image" content="https://loupewire.github.io/assets/brand/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Loupewire">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Patterns: one rule, four places - Loupewire guides">
+    <meta name="twitter:description" content="Track, Skip, Block and Mask all take a pattern and do four different things with it. One matching rule, and the differences that decide what you see.">
+    <meta name="twitter:image" content="https://loupewire.github.io/assets/brand/og-image.png">
+
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/brand/mark.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/brand/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#fafaf8">
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add('js');
+        var stored = null;
+        try {
+          stored = window.localStorage.getItem('loupewire-site-theme');
+        } catch (error) {
+          stored = null;
+        }
+        if (stored === 'light' || stored === 'dark') {
+          root.setAttribute('data-loupewire-theme', stored);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/css/tokens.css">
+    <link rel="stylesheet" href="/css/site-tokens.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/buttons.css">
+    <link rel="stylesheet" href="/css/pages/guide.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://loupewire.github.io/#organization",
+          "name": "Loupewire",
+          "url": "https://loupewire.github.io/",
+          "logo": "https://loupewire.github.io/assets/brand/favicon-512.png"
+        },
+        {
+          "@type": "TechArticle",
+          "@id": "https://loupewire.github.io/guides/patterns/#article",
+          "headline": "Patterns: one rule, four places",
+          "description": "Track, Skip, Block and Mask all take a pattern and do four different things with it. One matching rule, and the differences that decide what you see.",
+          "url": "https://loupewire.github.io/guides/patterns/",
+          "datePublished": "2026-09-20T00:00:00+07:00",
+          "dateModified": "2026-09-20T00:00:00+07:00",
+          "inLanguage": "en-US",
+          "author": {
+            "@id": "https://loupewire.github.io/#organization"
+          },
+          "publisher": {
+            "@id": "https://loupewire.github.io/#organization"
+          },
+          "about": {
+            "@type": "SoftwareApplication",
+            "@id": "https://loupewire.github.io/#software",
+            "name": "Loupewire",
+            "url": "https://loupewire.github.io/"
+          },
+          "image": "https://loupewire.github.io/assets/guides/patterns/02-mask-matches-a-name.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://loupewire.github.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Guides",
+              "item": "https://loupewire.github.io/guides/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Patterns: one rule, four places",
+              "item": "https://loupewire.github.io/guides/patterns/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE3C1NP6GV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-SE3C1NP6GV');
+    </script>
+  </head>
+  <body class="page page--guide page--guide-patterns">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="/">
+          <img src="/assets/brand/mark.svg" alt="" width="28" height="28">
+          <span>Loupewire</span>
+        </a>
+        <button class="site-header__menu" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="visually-hidden">Menu</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+            <path class="site-header__menu-open" d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path class="site-header__menu-close" d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="/guides/">Guides</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="/support/">Support</a></li>
+          </ul>
+          <div class="site-nav__actions">
+            <button class="theme-toggle" type="button" aria-pressed="false" title="Switch theme" data-theme-toggle>
+              <span class="visually-hidden">Switch to light theme</span>
+              <svg class="theme-toggle__sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <svg class="theme-toggle__moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <span class="btn btn--primary" aria-disabled="true" data-cta="navbar">Coming soon</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="site-main">
+      <div class="container guide">
+        <aside class="guide__sidebar">
+          <details class="guide-nav" open data-guide-nav>
+            <summary class="guide-nav__summary">All guides</summary>
+            <p class="guide-nav__title">Guides</p>
+            <ul class="guide-nav__list">
+              <li><a href="/guides/patterns/" aria-current="page">Patterns: one rule, four places</a></li>
+              <li><a href="/guides/header-rules/">Request header rules</a></li>
+            </ul>
+          </details>
+        </aside>
+        <article class="guide__article">
+          <nav class="guide__breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/guides/">Guides</a></li>
+              <li aria-current="page">Patterns: one rule, four places</li>
+            </ol>
+          </nav>
+          <header class="guide__header">
+            <h1>Patterns: one rule, four places</h1>
+            <p class="guide__lead">Track, Skip, Block and Mask all take a pattern and do four different things with it. One matching rule, and the differences that decide what you see.</p>
+            <p class="guide__updated">Updated <time datetime="2026-09-20">2026-09-20</time></p>
+          </header>
+          <nav class="guide__toc" aria-labelledby="toc-title">
+            <p class="guide__toc-title" id="toc-title">On this page</p>
+            <ol>
+              <li><a href="#how-a-pattern-matches">How a pattern matches</a></li>
+              <li><a href="#mask-is-the-one-that-does-not-match-a-url">Mask is the one that does not match a URL</a></li>
+              <li><a href="#an-empty-list-means-different-things">An empty list means different things</a></li>
+              <li><a href="#when-track-and-skip-disagree-skip-wins">When Track and Skip disagree, Skip wins</a></li>
+              <li><a href="#block-is-the-one-with-characters-it-refuses">Block is the one with characters it refuses</a></li>
+              <li><a href="#this-window-or-every-window">This window, or every window</a></li>
+              <li><a href="#common-mistakes">Common mistakes</a></li>
+              <li><a href="#not-in-this-version">Not in this version</a></li>
+            </ol>
+          </nav>
+          <div class="prose guide__body">
+            <p>Four buttons in the tracker toolbar take a pattern: <strong>Track</strong>, <strong>Skip</strong>, <strong>Block</strong> and <strong>Mask</strong>.
+            They look alike, they accept almost the same text, and they do four different things with it. This
+            page explains the matching rule once. Every other guide assumes it.</p>
+            <p>The one sentence worth memorising: Track and Skip decide what is <strong>recorded</strong>, Block decides what is
+            <strong>sent</strong>, and Mask decides what is <strong>shown</strong>.</p>
+            <figure class="guide__figure"><img src="/assets/guides/patterns/01-four-inputs.webp" alt="The tracker toolbar with the Track, Skip, Block and Mask buttons side by side, and the Track popover open below showing its input, its note and one chip" width="1280" height="720" loading="lazy"><figcaption>Four buttons, four lists. Each one carries the number of patterns in force.</figcaption></figure>
+            <h2 id="how-a-pattern-matches">How a pattern matches</h2>
+            <p>A pattern is a <strong>case-insensitive substring</strong>. Not a wildcard, not a regular expression, not a glob.
+            <code>api</code> matches <code>https://api.example.com/v2/orders</code> and <code>https://shop.example.com/api/cart</code>, because
+            the text appears somewhere in the URL.</p>
+            <p>Three things follow from &quot;substring&quot;:</p>
+            <ul>
+            <li><strong>The whole URL is searched</strong>, scheme included. <code>//api.</code> matches; <code>api.example.com</code> matches;
+            <code>example.com/api</code> does not match <code>https://api.example.com/</code>, because that text never appears in
+            that order.</li>
+            <li><strong>There is no way to anchor.</strong> You cannot say &quot;the URL must <em>start</em> with this&quot;. You say more of
+            it instead: <code>https://api.example.com/v2/</code> is a perfectly good pattern.</li>
+            <li><strong>Nothing is escaped, because nothing is syntax.</strong> A dot is a dot. The one exception is Block, and
+            it is below.</li>
+            </ul>
+            <p>Matching by regular expression or by HTTP method is on the roadmap and not available today.</p>
+            <h2 id="mask-is-the-one-that-does-not-match-a-url">Mask is the one that does not match a URL</h2>
+            <p>Mask matches the <strong>name of a field</strong> — a header, a cookie, a form field — and covers that field's
+            <strong>value</strong>. It never looks at a URL.</p>
+            <p>This is the single most common misreading of the four inputs. A pattern <code>/api/</code> in the Mask list
+            covers nothing, because no header is called <code>/api/</code>. What you want there is <code>authorization</code>, or
+            <code>token</code>, or the name of the field as it appears in the detail panel in front of you.</p>
+            <p>The reason it works on names is that the name is the part you can type. The value is the secret: it
+            rotates every session and nobody can type what they do not know. The name is stable and it is
+            already on screen.</p>
+            <p>A covered value is drawn as <code>B•••e</code> — first character, three dots, last character — and a value of
+            four characters or fewer is covered whole. There is no reveal control anywhere in the product, and
+            the value is not hidden in a tooltip or an accessible label either. The feature exists for the
+            screenshot you are about to take.</p>
+            <p>The input says so itself: the Mask field's note reads &quot;Matches a header or form field name. The
+            value of a matching field is covered in the panel, and there is no way to reveal it.&quot;</p>
+            <figure class="guide__figure"><img src="/assets/guides/patterns/02-mask-matches-a-name.webp" alt="The Headers panel of a request: x-request-id reads r dot dot dot z and authorization reads B dot dot dot e, with a Masked 3 badge on the tab strip" width="1280" height="720" loading="lazy"><figcaption>Two covered values that look identical: x-request-id because a pattern names it, authorization because the built-in preset does.</figcaption></figure>
+            <p>Those two covered values in the panel came from different places, and nothing on screen
+            distinguishes them. <code>x-request-id</code> is covered because a mask pattern was typed for it;
+            <code>authorization</code> is covered because the built-in secret preset already knows that name. That is
+            deliberate — a covered value is a covered value, whoever asked for it.</p>
+            <h2 id="an-empty-list-means-different-things">An empty list means different things</h2>
+            <p>Two of the lists invert each other, and both are right:</p>
+            <ul>
+            <li><strong>An empty Track list records everything.</strong> It is the state before you write your first pattern,
+            and it is what makes the tracker useful the moment it opens. A Track list with one entry in it
+            records <em>only</em> what matches that entry.</li>
+            <li><strong>An empty Mask list covers nothing</strong> — except the built-in secret preset, which is on by default
+            and covers the common credential field names whether you have configured anything or not.</li>
+            </ul>
+            <p>An <strong>empty pattern</strong> is refused in all four lists: &quot;Type something to match&quot;. An empty string is a
+            substring of every URL, so one blank entry in the Skip list would quietly switch capture off with
+            nothing on screen to explain why the table stopped filling.</p>
+            <h2 id="when-track-and-skip-disagree-skip-wins">When Track and Skip disagree, Skip wins</h2>
+            <p>The rule the tracker applies to every request is exactly this:</p>
+            <blockquote>
+            <p>record it if the Track list is empty <strong>or</strong> the URL matches a Track pattern, <strong>and</strong> the URL
+            matches no Skip pattern.</p>
+            </blockquote>
+            <p>So a URL that matches both lists is not recorded. Skip is the more specific statement — you are
+            naming noise inside a region you otherwise want — and it is the one that wins.</p>
+            <p>Here is the same page loaded twice. First with a Track pattern alone, <code>example.com</code>, which matches
+            everything the page does:</p>
+            <figure class="guide__figure"><img src="/assets/guides/patterns/03-without-skip.webp" alt="The request table with Track 1 and Skip 0, seventeen rows including two from cdn.example.com" width="1280" height="720" loading="lazy"><figcaption>Track example.com on its own: seventeen requests, the two CDN assets among them.</figcaption></figure>
+            <p>Then the same traffic with <code>cdn.example.com</code> added to Skip. Those two URLs match the Track pattern
+            as well, and they are gone:</p>
+            <figure class="guide__figure"><img src="/assets/guides/patterns/04-skip-wins.webp" alt="The same table with Track 1 and Skip 1, fifteen rows and no cdn.example.com among them" width="1280" height="720" loading="lazy"><figcaption>Skip cdn.example.com added: the same run, two rows fewer, and no trace of them anywhere.</figcaption></figure>
+            <p>A request excluded this way leaves <strong>no trace at all</strong>: no row, no counter, nothing to recover. That
+            is the point of it, and it is also the reason to reach for the filter bar instead when you are not
+            sure yet. The filter only hides.</p>
+            <h2 id="block-is-the-one-with-characters-it-refuses">Block is the one with characters it refuses</h2>
+            <p>Block does not match inside the page like the other three. It hands your pattern to the browser's
+            own rule engine, which is how a blocked request is never sent at all. The browser's rule language
+            reads three characters as syntax rather than as text:</p>
+            <ul>
+            <li><code>*</code> is a wildcard,</li>
+            <li><code>^</code> matches a separator,</li>
+            <li><code>|</code> anchors to the start or the end of the URL.</li>
+            </ul>
+            <p>Type one of them into Block and the pattern is refused: &quot;<code>* ^ and |</code> have a special meaning in a
+            block rule, so this would match more than what you typed.&quot; The refusal is deliberate. The browser
+            would accept <code>a*b</code> happily, write the rule, show you the chip — and match URLs you never described.
+            Nothing on screen would be wrong, which is worse than being told no.</p>
+            <figure class="guide__figure"><img src="/assets/guides/patterns/05-block-rejects.webp" alt="The Block popover with star dot doubleclick dot net typed in, a red refusal message below the input, and the list still reading No patterns yet" width="1280" height="720" loading="lazy"><figcaption>Refused, and not added: the list below still says &quot;No patterns yet.&quot;</figcaption></figure>
+            <p>Block also requires plain ASCII, and here the refusal comes with a way out: the browser encodes a
+            URL before matching it, so type the encoded form. <code>bücher.de</code> is <code>xn--bcher-kva.de</code>.</p>
+            <p>The other three lists accept those characters happily, and Skip positively needs them, because the
+            filter bar spells alternation with <code>|</code>.</p>
+            <p>The same grammar applies to the <strong>URL filter on a request header rule</strong>, which is the fifth input
+            that takes a pattern in this product. It becomes a browser rule too, so it refuses the same three
+            characters for the same reason. See <a href="/guides/header-rules/">Request header rules</a>.</p>
+            <h2 id="this-window-or-every-window">This window, or every window</h2>
+            <p>Every list exists twice.</p>
+            <ul>
+            <li><strong>Session patterns</strong> are typed in the tracker's toolbar. They apply to this window and they are
+            gone when it closes. The note under the input says it: &quot;Case-insensitive substring. Requests
+            already captured stay; session patterns are lost when this window closes.&quot;</li>
+            <li><strong>Global patterns</strong> are typed in Settings. They are stored, and they apply to every tracker
+            window from now on.</li>
+            </ul>
+            <p>The two lists are <strong>merged</strong>, not overridden. A global list is your always-on baseline; a session
+            pattern is an addition for the next hour. That is why you do not have to retype your global list to
+            add one entry temporarily.</p>
+            <figure class="guide__figure"><img src="/assets/guides/patterns/06-global-patterns.webp" alt="The Settings page, Global patterns section, with the four labelled inputs and a chip under Skip and under Mask" width="1280" height="720" loading="lazy"><figcaption>Settings: the same four lists, kept until you remove them.</figcaption></figure>
+            <p>Global patterns are shown in the tracker too, prefixed &quot;From options:&quot; and without a remove button —
+            you remove them where you wrote them. They are listed there so that a request vanishing because of a
+            rule you wrote weeks ago is explainable from the window where it happens.</p>
+            <figure class="guide__figure"><img src="/assets/guides/patterns/07-global-in-tracker.webp" alt="The Skip popover listing two chips: From options analytics with no remove button, and This window beacon with one" width="1280" height="720" loading="lazy"><figcaption>Both lists in one panel. Only the one you typed here has a remove button.</figcaption></figure>
+            <p>Typing a session pattern that a global pattern already covers is refused, with &quot;Already applied from
+            options&quot;. It would put two chips on screen for one rule, and removing the session copy would leave
+            the global one still matching, which reads as a broken remove button.</p>
+            <h2 id="common-mistakes">Common mistakes</h2>
+            <ul>
+            <li><strong>A URL typed into Mask.</strong> Mask matches field names. See the section above; it is the mistake this
+            page exists for.</li>
+            <li><strong>A Track pattern that excludes more than it includes.</strong> The moment the Track list has one entry,
+            everything not matching it stops being recorded — including the redirect you were about to follow.</li>
+            <li><strong>Expecting Skip to free up memory.</strong> Skip keeps new requests out; it does not remove rows already
+            captured, and it does not give back what they cost. Use Clear for that.</li>
+            <li><strong>Expecting Block to hide rows.</strong> A blocked request is exactly the one you want to see, so it
+            still appears in the table, marked as blocked. Block is not a quieter Skip.</li>
+            <li><strong>The same word in two lists.</strong> Mask <code>token</code> and Skip <code>token</code> are unrelated rules about different
+            things, and both are accepted. Only a duplicate <em>within one list</em> is refused.</li>
+            </ul>
+            <h2 id="not-in-this-version">Not in this version</h2>
+            <p>Regular expressions, wildcards and matching by HTTP method are on the roadmap. Patterns cannot be
+            grouped or named yet, and there is no import or export of a pattern set; environment profiles, which
+            switch a whole set at once, are a planned feature and not available today.</p>
+
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="/">
+            <img src="/assets/brand/mark.svg" alt="" width="32" height="32">
+            <span>Loupewire</span>
+          </a>
+          <p class="site-footer__tagline">HTTP request inspector, header editor and masked HAR export for Chrome, Edge & Chromium browsers</p>
+          <p class="site-footer__promise">Everything the extension captures stays on your device. No account, no telemetry.</p>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Product</h2>
+          <ul class="site-footer__links">
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/support/">Support</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Legal</h2>
+          <ul class="site-footer__links">
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Community</h2>
+          <ul class="site-footer__links">
+            <li><a href="https://github.com/loupewire" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/loupewire/loupewire-support/issues" target="_blank" rel="noopener noreferrer">Report a bug</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>&copy; 2026 Loupewire. For Chrome, Edge &amp; Chromium browsers.</p>
+      </div>
+    </footer>
+    <script src="/js/utils/analytics.js" defer></script>
+    <script src="/js/utils/browser-detect.js" defer></script>
+    <script src="/js/utils/theme-toggle.js" defer></script>
+    <script src="/js/utils/nav-toggle.js" defer></script>
+    <script src="/js/pages/guide.js" defer></script>
+  </body>
+</html>
