@@ -1,0 +1,232 @@
+/* A guide: sidebar with every guide, breadcrumb, article, table of contents.
+   The sidebar is a <details> that is open in the markup, so a page without
+   JavaScript shows the list; on wide screens the summary is hidden and the
+   list simply sits beside the article. */
+
+.guide {
+  display: grid;
+  gap: var(--loupewire-space-2xl);
+  padding-block: var(--loupewire-space-2xl) var(--loupewire-space-4xl);
+}
+
+@media (min-width: 960px) {
+  .guide {
+    grid-template-columns: 240px minmax(0, 1fr);
+    gap: var(--loupewire-space-4xl);
+  }
+
+  .guide__sidebar {
+    position: sticky;
+    inset-block-start: calc(var(--loupewire-header-block-size) + var(--loupewire-space-lg));
+    align-self: start;
+    max-block-size: calc(100vh - var(--loupewire-header-block-size) - var(--loupewire-space-2xl));
+    overflow-y: auto;
+  }
+
+  .guide-nav__summary {
+    display: none;
+  }
+}
+
+/* Sidebar ------------------------------------------------------ */
+
+.guide-nav__summary {
+  padding: var(--loupewire-space-md) var(--loupewire-space-lg);
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-md);
+  font-weight: var(--loupewire-font-weight-semibold);
+  cursor: pointer;
+  list-style: none;
+}
+
+.guide-nav__summary::-webkit-details-marker {
+  display: none;
+}
+
+.guide-nav__summary::after {
+  content: ' ▾';
+  color: var(--loupewire-text-muted);
+}
+
+.guide-nav[open] .guide-nav__summary::after {
+  content: ' ▴';
+}
+
+.guide-nav__title {
+  display: none; /* shown from 960px up, in the media block at the end of this section */
+  margin-block-end: var(--loupewire-space-md);
+  font-size: var(--loupewire-font-size-sm);
+  font-weight: var(--loupewire-font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--loupewire-text-muted);
+}
+
+.guide-nav__list {
+  margin: var(--loupewire-space-sm) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-nav__list a {
+  display: block;
+  padding: var(--loupewire-space-sm) var(--loupewire-space-md);
+  border-inline-start: 2px solid transparent;
+  border-radius: 0 var(--loupewire-radius-sm) var(--loupewire-radius-sm) 0;
+  color: var(--loupewire-text-muted);
+  text-decoration: none;
+}
+
+.guide-nav__list a:hover {
+  color: var(--loupewire-text);
+  background: var(--loupewire-surface-hover);
+}
+
+.guide-nav__list a[aria-current='page'] {
+  border-inline-start-color: var(--loupewire-brand-primary);
+  color: var(--loupewire-text);
+  font-weight: var(--loupewire-font-weight-semibold);
+  background: var(--loupewire-brand-primary-subtle);
+}
+
+@media (min-width: 960px) {
+  .guide-nav__title {
+    display: block;
+  }
+}
+
+/* Article ------------------------------------------------------ */
+
+.guide__article {
+  min-inline-size: 0;
+  max-inline-size: 76ch;
+}
+
+.guide__breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--loupewire-space-sm);
+  margin: 0 0 var(--loupewire-space-xl);
+  padding: 0;
+  list-style: none;
+  font-size: var(--loupewire-font-size-md);
+  color: var(--loupewire-text-muted);
+}
+
+.guide__breadcrumb li + li::before {
+  content: '›';
+  margin-inline-end: var(--loupewire-space-sm);
+}
+
+.guide__breadcrumb a {
+  color: var(--loupewire-text-muted);
+}
+
+.guide__header {
+  margin-block-end: var(--loupewire-space-2xl);
+  padding-block-end: var(--loupewire-space-xl);
+  border-block-end: 1px solid var(--loupewire-border);
+}
+
+.guide__header h1 {
+  font-size: var(--loupewire-display-lg);
+}
+
+.guide__lead {
+  margin-block-start: var(--loupewire-space-md);
+  font-size: var(--loupewire-font-size-lg);
+  color: var(--loupewire-text-muted);
+}
+
+.guide__updated {
+  margin-block-start: var(--loupewire-space-md);
+  font-family: var(--loupewire-font-family-mono);
+  font-size: var(--loupewire-font-size-sm);
+  color: var(--loupewire-text-muted);
+}
+
+/* Table of contents -------------------------------------------- */
+
+.guide__toc {
+  margin-block-end: var(--loupewire-space-2xl);
+  padding: var(--loupewire-space-lg) var(--loupewire-space-xl);
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-md);
+  background: var(--loupewire-surface);
+}
+
+.guide__toc-title {
+  margin-block-end: var(--loupewire-space-sm);
+  font-size: var(--loupewire-font-size-sm);
+  font-weight: var(--loupewire-font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--loupewire-text-muted);
+}
+
+.guide__toc ol {
+  margin: 0;
+  padding-inline-start: 1.25em;
+}
+
+.guide__toc li + li {
+  margin-block-start: var(--loupewire-space-xs);
+}
+
+.guide__toc a {
+  color: var(--loupewire-text-muted);
+  text-decoration: none;
+}
+
+.guide__toc a:hover,
+.guide__toc a[aria-current='true'] {
+  color: var(--loupewire-accent);
+}
+
+/* Body ---------------------------------------------------------- */
+
+.guide__body h2 {
+  scroll-margin-block-start: calc(var(--loupewire-header-block-size) + var(--loupewire-space-lg));
+}
+
+.guide__body h3 {
+  scroll-margin-block-start: calc(var(--loupewire-header-block-size) + var(--loupewire-space-lg));
+}
+
+.guide__figure {
+  margin: var(--loupewire-space-xl) 0;
+}
+
+.guide__figure img {
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-lg);
+  box-shadow: var(--loupewire-shadow-md);
+}
+
+.guide__figure figcaption {
+  margin-block-start: var(--loupewire-space-sm);
+  font-size: var(--loupewire-font-size-md);
+  color: var(--loupewire-text-muted);
+}
+
+.guide__body blockquote {
+  margin: var(--loupewire-space-lg) 0;
+  padding: var(--loupewire-space-md) var(--loupewire-space-xl);
+  border-inline-start: 3px solid var(--loupewire-brand-accent);
+  border-radius: var(--loupewire-radius-md);
+  background: var(--loupewire-surface);
+  color: var(--loupewire-text);
+}
+
+.guide__body blockquote p + p {
+  margin-block-start: var(--loupewire-space-sm);
+}
+
+.guide__body kbd {
+  padding: 0.1em 0.4em;
+  border: 1px solid var(--loupewire-border-strong);
+  border-block-end-width: 2px;
+  border-radius: var(--loupewire-radius-sm);
+  background: var(--loupewire-surface-raised);
+  font-size: 0.85em;
+}

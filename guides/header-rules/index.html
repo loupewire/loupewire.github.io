@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en" data-loupewire-theme="light">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Request header rules - Loupewire guides</title>
+    <meta name="description" content="Add or set a request header on every request that matches a URL filter, see it land on live traffic in the same window, and pause it with one click.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://loupewire.github.io/guides/header-rules/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://loupewire.github.io/guides/header-rules/">
+    <meta property="og:title" content="Request header rules - Loupewire guides">
+    <meta property="og:description" content="Add or set a request header on every request that matches a URL filter, see it land on live traffic in the same window, and pause it with one click.">
+    <meta property="og:image" content="https://loupewire.github.io/assets/brand/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Loupewire">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Request header rules - Loupewire guides">
+    <meta name="twitter:description" content="Add or set a request header on every request that matches a URL filter, see it land on live traffic in the same window, and pause it with one click.">
+    <meta name="twitter:image" content="https://loupewire.github.io/assets/brand/og-image.png">
+
+    <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
+    <link rel="icon" href="/assets/brand/mark.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/brand/favicon-192.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/assets/brand/favicon-96.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/brand/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/brand/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/brand/favicon-16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/brand/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#fafaf8">
+
+    <script>
+      (function () {
+        var root = document.documentElement;
+        root.classList.add('js');
+        var stored = null;
+        try {
+          stored = window.localStorage.getItem('loupewire-site-theme');
+        } catch (error) {
+          stored = null;
+        }
+        if (stored === 'light' || stored === 'dark') {
+          root.setAttribute('data-loupewire-theme', stored);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/css/tokens.css">
+    <link rel="stylesheet" href="/css/site-tokens.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/components/header.css">
+    <link rel="stylesheet" href="/css/components/footer.css">
+    <link rel="stylesheet" href="/css/components/buttons.css">
+    <link rel="stylesheet" href="/css/pages/guide.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "TechArticle",
+          "@id": "https://loupewire.github.io/guides/header-rules/#article",
+          "headline": "Request header rules",
+          "description": "Add or set a request header on every request that matches a URL filter, see it land on live traffic in the same window, and pause it with one click.",
+          "url": "https://loupewire.github.io/guides/header-rules/",
+          "datePublished": "2026-09-20",
+          "dateModified": "2026-09-20",
+          "inLanguage": "en-US",
+          "author": {
+            "@id": "https://loupewire.github.io/#organization"
+          },
+          "publisher": {
+            "@id": "https://loupewire.github.io/#organization"
+          },
+          "about": {
+            "@id": "https://loupewire.github.io/#software"
+          },
+          "image": "https://loupewire.github.io/assets/guides/header-rules/04-see-it-land.webp"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://loupewire.github.io/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Guides",
+              "item": "https://loupewire.github.io/guides/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Request header rules",
+              "item": "https://loupewire.github.io/guides/header-rules/"
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SE3C1NP6GV"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-SE3C1NP6GV');
+    </script>
+  </head>
+  <body class="page page--guide page--guide-header-rules">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__brand" href="/">
+          <img src="/assets/brand/mark.svg" alt="" width="28" height="28">
+          <span>Loupewire</span>
+        </a>
+        <button class="site-header__menu" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+          <span class="visually-hidden">Menu</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24">
+            <path class="site-header__menu-open" d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+            <path class="site-header__menu-close" d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </button>
+        <nav id="site-nav" class="site-nav" aria-label="Main">
+          <ul class="site-nav__list">
+            <li class="site-nav__item"><a class="site-nav__link" href="/guides/">Guides</a></li>
+            <li class="site-nav__item"><a class="site-nav__link" href="/support/">Support</a></li>
+          </ul>
+          <div class="site-nav__actions">
+            <button class="theme-toggle" type="button" aria-pressed="false" title="Switch theme" data-theme-toggle>
+              <span class="visually-hidden">Switch to light theme</span>
+              <svg class="theme-toggle__sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <svg class="theme-toggle__moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <span class="btn btn--primary" aria-disabled="true" data-cta="navbar">Coming soon</span>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="site-main">
+      <div class="container guide">
+        <aside class="guide__sidebar">
+          <details class="guide-nav" open data-guide-nav>
+            <summary class="guide-nav__summary">All guides</summary>
+            <p class="guide-nav__title">Guides</p>
+            <ul class="guide-nav__list">
+              <li><a href="/guides/header-rules/" aria-current="page">Request header rules</a></li>
+            </ul>
+          </details>
+        </aside>
+        <article class="guide__article">
+          <nav class="guide__breadcrumb" aria-label="Breadcrumb">
+            <ol>
+              <li><a href="/">Home</a></li>
+              <li><a href="/guides/">Guides</a></li>
+              <li aria-current="page">Request header rules</li>
+            </ol>
+          </nav>
+          <header class="guide__header">
+            <h1>Request header rules</h1>
+            <p class="guide__lead">Add or set a request header on every request that matches a URL filter, see it land on live traffic in the same window, and pause it with one click.</p>
+            <p class="guide__updated">Updated <time datetime="2026-09-20">2026-09-20</time></p>
+          </header>
+          <nav class="guide__toc" aria-labelledby="toc-title">
+            <p class="guide__toc-title" id="toc-title">On this page</p>
+            <ol>
+              <li><a href="#open-the-rules">Open the rules</a></li>
+              <li><a href="#add-a-rule">Add a rule</a></li>
+              <li><a href="#see-it-land">See it land</a></li>
+              <li><a href="#headers-that-get-a-warning">Headers that get a warning</a></li>
+              <li><a href="#pause-and-what-happens-when-the-window-closes">Pause, and what happens when the window closes</a></li>
+              <li><a href="#common-mistakes">Common mistakes</a></li>
+              <li><a href="#not-in-this-version">Not in this version</a></li>
+            </ol>
+          </nav>
+          <div class="prose guide__body">
+            <p>A header rule tells the browser to set a request header on every request whose URL matches a
+            filter, before the request leaves the browser. The usual reasons: an <code>Authorization</code> token for a
+            staging API, a feature-flag header, a tenant or a debug user, so you can reproduce what a customer
+            sees without touching the page's code and without a proxy.</p>
+            <p>The rule is applied by the browser's own rule engine, not by a script in the page, and the request
+            you see in the table is the one that was actually sent, header included.</p>
+            <h2 id="open-the-rules">Open the rules</h2>
+            <p>Open the tracker window with <code>Ctrl+Shift+1</code>. In the toolbar, the
+            <strong>Headers</strong> button carries a count of the rules in force; click it to open the rules panel. On a
+            fresh install it says &quot;No header rules yet.&quot;</p>
+            <figure class="guide__figure"><img src="/assets/guides/header-rules/01-open-rules.webp" alt="The tracker toolbar with the Headers button pressed and an empty rules panel open below it" width="1280" height="720" loading="lazy"><figcaption>The Headers button in the toolbar opens the rules panel.</figcaption></figure>
+            <h2 id="add-a-rule">Add a rule</h2>
+            <p>A rule has three fields.</p>
+            <ul>
+            <li><strong>Header</strong>: the name, for example <code>x-debug-user</code> or <code>Authorization</code>. Letters, digits and the
+            usual token characters; no spaces, no colons.</li>
+            <li><strong>Value</strong>: what to send. It goes on the wire exactly as typed, so it must be plain ASCII. An
+            empty value is allowed; it is a legal header value.</li>
+            <li><strong>URL filter</strong>: a plain, case-insensitive substring of the URL, such as <code>api.example.com</code> or
+            <code>/v2/</code>. Leave it empty and the rule applies to every request the browser makes while the tracker
+            is open.</li>
+            </ul>
+            <figure class="guide__figure"><img src="/assets/guides/header-rules/02-type-rule.webp" alt="The rules panel with x-debug-user, qa-thea-vu and api.example.com typed into the three fields" width="1280" height="720" loading="lazy"><figcaption>Name, value and the URL filter, before Add.</figcaption></figure>
+            <p>Click <strong>Add</strong>. The rule is in force the moment it lands: the row appears with its checkbox ticked
+            and the count on the Headers button goes up by one. There is no save step.</p>
+            <figure class="guide__figure"><img src="/assets/guides/header-rules/03-added.webp" alt="The rules panel after Add: the rule row is listed with its checkbox ticked and the Headers count reads 1" width="1280" height="720" loading="lazy"><figcaption>In force as soon as it is added.</figcaption></figure>
+            <blockquote>
+            <p><strong>Think twice before leaving the filter empty.</strong> A rule with no filter attaches its header to
+            every site loaded while the tracker is open. For a token, that means sending your credential to
+            every host you visit. Name the host you mean.</p>
+            </blockquote>
+            <h2 id="see-it-land">See it land</h2>
+            <p>Reload the page you are testing, or let it make its next request. Select a request whose URL
+            matches the filter and open its <strong>Headers</strong> tab. The header is there, with the value you typed,
+            and below it a note: &quot;Matches one of your header rules&quot;.</p>
+            <figure class="guide__figure"><img src="/assets/guides/header-rules/04-see-it-land.webp" alt="A POST to api.example.com selected in the table; the Headers panel lists x-debug-user with the note &quot;Matches one of your header rules&quot;" width="1280" height="720" loading="lazy"><figcaption>The request as it was sent, with the header the rule set.</figcaption></figure>
+            <p>Two things worth knowing about what you see there:</p>
+            <ul>
+            <li><strong>The name comes back in lowercase.</strong> A rule written as <code>Authorization</code> lists as
+            <code>authorization</code>, next to browser-generated headers that keep their capitals. That is how the
+            browser reports a header set by a rule; header names are case-insensitive, so nothing depends on
+            it.</li>
+            <li><strong>Masking still wins.</strong> If the header is also covered by a mask pattern, such as the built-in
+            one for <code>Authorization</code>, the panel shows the masked value and the rule note together. A rule you
+            wrote is not a reason to uncover a token.</li>
+            </ul>
+            <p>The note means the request matches an enabled rule. A request captured before the rule existed
+            shows its old value and is marked all the same, because the mark is about the rule, not about what
+            changed.</p>
+            <h2 id="headers-that-get-a-warning">Headers that get a warning</h2>
+            <p>Nothing is refused by name. Some headers are part of how the connection itself works, and editing
+            one may break the request rather than change it: <code>Host</code>, <code>Connection</code>, <code>Content-Length</code>,
+            <code>Transfer-Encoding</code>, <code>Keep-Alive</code>, <code>Upgrade</code>, <code>TE</code>, <code>Trailer</code>, and anything starting with
+            <code>Proxy-</code> or <code>Sec-</code>. Add one of those and the rule is accepted like any other, but its row carries
+            an alert triangle; hover or focus it and it says that editing this header may break the request
+            rather than change it.</p>
+            <figure class="guide__figure"><img src="/assets/guides/header-rules/05-protocol-warning.webp" alt="The rules panel with a Host rule added; its row shows an alert triangle and the tooltip reads that editing this header may break the request rather than change it" width="1280" height="720" loading="lazy"><figcaption>A warning, not a refusal.</figcaption></figure>
+            <p>A wrong <code>Content-Length</code>, for instance, gets a <code>400</code> from most servers. <code>Authorization</code>, <code>Cookie</code>
+            and <code>Origin</code> are ordinary headers here and carry no warning.</p>
+            <p>What the panel does refuse: a name that is not a valid header name, a value with characters outside
+            plain ASCII, a filter containing <code>*</code>, <code>^</code> or <code>|</code> (the browser would read those as pattern syntax),
+            and a second rule with the same header <strong>and</strong> the same filter.</p>
+            <h2 id="pause-and-what-happens-when-the-window-closes">Pause, and what happens when the window closes</h2>
+            <p>Untick a rule to pause it. It stays in the list, the count goes down, and the next matching request
+            goes out without the header. Tick it again to resume. The delete button removes it for good.</p>
+            <figure class="guide__figure"><img src="/assets/guides/header-rules/06-paused.webp" alt="The rules panel with the rule's checkbox unticked and the Headers count reading 0" width="1280" height="720" loading="lazy"><figcaption>Paused: kept in the list, not in force.</figcaption></figure>
+            <p>Rules exist only while the tracker window is open. Close the window and every rule stops; open it
+            again and the rules you kept come back into force. Nothing is left running in the background that
+            could keep attaching a header without a window to show it.</p>
+            <h2 id="common-mistakes">Common mistakes</h2>
+            <ul>
+            <li><strong>The header is not on the request you are looking at.</strong> Check the filter against the full URL,
+            scheme included. <code>api.example.com</code> matches <code>https://api.example.com/v2/orders</code>; <code>example.com/api</code>
+            does not.</li>
+            <li><strong>You expected the header on the page load itself.</strong> It is there. Rules apply to every kind of
+            request, the top-level navigation included, not only to <code>fetch</code> and <code>XHR</code>.</li>
+            <li><strong>Two rules for one header on the same URL.</strong> The panel refuses an exact duplicate (same name,
+            same filter). Two rules with the same name and different filters are allowed and can both match a
+            URL; which value wins then is not defined, so give them filters that do not overlap.</li>
+            <li><strong>A response header rule.</strong> This panel sets request headers only. Editing response headers, for
+            CORS or CSP experiments, is a separate feature that is not in this version.</li>
+            </ul>
+            <h2 id="not-in-this-version">Not in this version</h2>
+            <p>Rules always <strong>set</strong> a header: they create it when absent and overwrite it when present. Appending
+            to an existing value, removing a header, matching by regular expression or by HTTP method, and
+            response header rules are on the roadmap and not available today.</p>
+
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <a class="site-footer__logo" href="/">
+            <img src="/assets/brand/mark.svg" alt="" width="32" height="32">
+            <span>Loupewire</span>
+          </a>
+          <p class="site-footer__tagline">HTTP request inspector, header editor and masked HAR export for Chrome, Edge & Chromium browsers</p>
+          <p class="site-footer__promise">Everything the extension captures stays on your device. No account, no telemetry.</p>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Product</h2>
+          <ul class="site-footer__links">
+            <li><a href="/guides/">Guides</a></li>
+            <li><a href="/support/">Support</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Legal</h2>
+          <ul class="site-footer__links">
+            <li><a href="/privacy-policy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms</a></li>
+          </ul>
+        </div>
+        <div class="site-footer__group">
+          <h2 class="site-footer__title">Community</h2>
+          <ul class="site-footer__links">
+            <li><a href="https://github.com/loupewire" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://github.com/loupewire/loupewire-support/issues" target="_blank" rel="noopener noreferrer">Report a bug</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container site-footer__bottom">
+        <p>&copy; 2026 Loupewire. For Chrome, Edge &amp; Chromium browsers.</p>
+      </div>
+    </footer>
+    <script src="/js/utils/analytics.js" defer></script>
+    <script src="/js/utils/browser-detect.js" defer></script>
+    <script src="/js/utils/theme-toggle.js" defer></script>
+    <script src="/js/utils/nav-toggle.js" defer></script>
+    <script src="/js/pages/guide.js" defer></script>
+  </body>
+</html>
