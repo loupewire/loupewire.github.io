@@ -157,6 +157,60 @@ pre code {
   color: var(--loupewire-text-muted);
 }
 
+/* Split: a heading and a line of lead beside the content, so a section
+   with a short list spans the container like its neighbours while the
+   list keeps a readable width. One column on a phone. ------------- */
+
+.split {
+  display: grid;
+  gap: var(--loupewire-space-2xl);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .split {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: var(--loupewire-space-4xl);
+  }
+}
+
+.split__lead {
+  max-inline-size: 36ch;
+  margin-block-start: var(--loupewire-space-md);
+  color: var(--loupewire-text-muted);
+}
+
+/* Checklist: a framed list with an accent dot per item ------------ */
+
+.checklist {
+  margin: 0;
+  padding: var(--loupewire-space-xl);
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-lg);
+  background: var(--loupewire-surface);
+  list-style: none;
+}
+
+.checklist li {
+  position: relative;
+  padding-inline-start: var(--loupewire-space-xl);
+}
+
+.checklist li + li {
+  margin-block-start: var(--loupewire-space-md);
+}
+
+.checklist li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0.55em;
+  inline-size: 10px;
+  block-size: 10px;
+  border-radius: var(--loupewire-radius-full);
+  background: var(--loupewire-brand-accent);
+}
+
 /* Prose: the reading column of legal pages and guides ----------- */
 
 .prose {

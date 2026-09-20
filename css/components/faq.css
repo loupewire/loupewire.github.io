@@ -5,28 +5,13 @@
    spans the container like its neighbours while each question still reads
    at a comfortable width. One column on a phone. */
 
-.faq__inner {
-  display: grid;
-  gap: var(--loupewire-space-2xl);
-  align-items: start;
-}
-
+/* The two-column frame is the shared .split in global.css; the intro
+   stays in view while the list scrolls. */
 @media (min-width: 900px) {
-  .faq__inner {
-    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-    gap: var(--loupewire-space-4xl);
-  }
-
   .faq__intro {
     position: sticky;
     inset-block-start: calc(var(--loupewire-header-block-size) + var(--loupewire-space-xl));
   }
-}
-
-.faq__lead {
-  max-inline-size: 36ch;
-  margin-block-start: var(--loupewire-space-md);
-  color: var(--loupewire-text-muted);
 }
 
 .faq__list {

@@ -104,35 +104,6 @@
   box-shadow: var(--loupewire-shadow-md);
 }
 
-.feature__facts {
-  margin: 0;
-  padding: var(--loupewire-space-xl);
-  border: 1px solid var(--loupewire-border);
-  border-radius: var(--loupewire-radius-lg);
-  background: var(--loupewire-surface);
-  list-style: none;
-}
-
-.feature__facts li {
-  position: relative;
-  padding-inline-start: var(--loupewire-space-xl);
-}
-
-.feature__facts li + li {
-  margin-block-start: var(--loupewire-space-md);
-}
-
-.feature__facts li::before {
-  content: '';
-  position: absolute;
-  inset-inline-start: 0;
-  inset-block-start: 0.55em;
-  inline-size: 10px;
-  block-size: 10px;
-  border-radius: var(--loupewire-radius-full);
-  background: var(--loupewire-brand-accent);
-}
-
 /* Limits: one framed statement. */
 
 .limits {
