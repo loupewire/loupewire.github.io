@@ -3,7 +3,3 @@
 .guides {
   padding-block-start: var(--loupewire-space-4xl);
 }
-
-.guides .section__header {
-  max-inline-size: 72ch;
-}

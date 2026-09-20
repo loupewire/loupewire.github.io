@@ -4,10 +4,6 @@
   padding-block-start: var(--loupewire-space-4xl);
 }
 
-.support .section__header {
-  max-inline-size: 72ch;
-}
-
 .support__include {
   padding-block: 0;
 }
