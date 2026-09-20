@@ -1,12 +1,35 @@
 /* FAQ: native <details>, so every item works with no script and the
-   structured data (FAQPage) describes exactly what the page shows. */
+   structured data (FAQPage) describes exactly what the page shows.
 
-.faq__inner > h2 {
-  margin-block-end: var(--loupewire-space-2xl);
+   Two columns on a wide screen, heading beside the list, so the section
+   spans the container like its neighbours while each question still reads
+   at a comfortable width. One column on a phone. */
+
+.faq__inner {
+  display: grid;
+  gap: var(--loupewire-space-2xl);
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .faq__inner {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: var(--loupewire-space-4xl);
+  }
+
+  .faq__intro {
+    position: sticky;
+    inset-block-start: calc(var(--loupewire-header-block-size) + var(--loupewire-space-xl));
+  }
+}
+
+.faq__lead {
+  max-inline-size: 36ch;
+  margin-block-start: var(--loupewire-space-md);
+  color: var(--loupewire-text-muted);
 }
 
 .faq__list {
-  max-inline-size: 72ch;
   border-block-start: 1px solid var(--loupewire-border);
 }
 
