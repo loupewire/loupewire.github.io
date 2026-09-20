@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Track and Skip - Loupewire guides</title>
-    <meta name="description" content="Two lists that decide what the tracker records at all. What Skip removes is gone for good, which is why the filter bar exists beside them.">
+    <title>Block a request - Loupewire guides</title>
+    <meta name="description" content="Stop a request from ever leaving the browser, to prove a dependency or simulate an outage. The row stays in the table, marked, so you keep the evidence.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://loupewire.github.io/guides/track-and-skip/">
+    <link rel="canonical" href="https://loupewire.github.io/guides/block/">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://loupewire.github.io/guides/track-and-skip/">
-    <meta property="og:title" content="Track and Skip - Loupewire guides">
-    <meta property="og:description" content="Two lists that decide what the tracker records at all. What Skip removes is gone for good, which is why the filter bar exists beside them.">
+    <meta property="og:url" content="https://loupewire.github.io/guides/block/">
+    <meta property="og:title" content="Block a request - Loupewire guides">
+    <meta property="og:description" content="Stop a request from ever leaving the browser, to prove a dependency or simulate an outage. The row stays in the table, marked, so you keep the evidence.">
     <meta property="og:image" content="https://loupewire.github.io/assets/brand/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Loupewire">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Track and Skip - Loupewire guides">
-    <meta name="twitter:description" content="Two lists that decide what the tracker records at all. What Skip removes is gone for good, which is why the filter bar exists beside them.">
+    <meta name="twitter:title" content="Block a request - Loupewire guides">
+    <meta name="twitter:description" content="Stop a request from ever leaving the browser, to prove a dependency or simulate an outage. The row stays in the table, marked, so you keep the evidence.">
     <meta name="twitter:image" content="https://loupewire.github.io/assets/brand/og-image.png">
 
     <link rel="icon" href="/assets/brand/favicon.ico" sizes="32x32">
@@ -68,10 +68,10 @@
         },
         {
           "@type": "TechArticle",
-          "@id": "https://loupewire.github.io/guides/track-and-skip/#article",
-          "headline": "Track and Skip",
-          "description": "Two lists that decide what the tracker records at all. What Skip removes is gone for good, which is why the filter bar exists beside them.",
-          "url": "https://loupewire.github.io/guides/track-and-skip/",
+          "@id": "https://loupewire.github.io/guides/block/#article",
+          "headline": "Block a request",
+          "description": "Stop a request from ever leaving the browser, to prove a dependency or simulate an outage. The row stays in the table, marked, so you keep the evidence.",
+          "url": "https://loupewire.github.io/guides/block/",
           "datePublished": "2026-09-20T00:00:00+07:00",
           "dateModified": "2026-09-20T00:00:00+07:00",
           "inLanguage": "en-US",
@@ -87,7 +87,7 @@
             "name": "Loupewire",
             "url": "https://loupewire.github.io/"
           },
-          "image": "https://loupewire.github.io/assets/guides/track-and-skip/01-track-list.webp"
+          "image": "https://loupewire.github.io/assets/guides/block/02-blocked-row.webp"
         },
         {
           "@type": "BreadcrumbList",
@@ -107,8 +107,8 @@
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "Track and Skip",
-              "item": "https://loupewire.github.io/guides/track-and-skip/"
+              "name": "Block a request",
+              "item": "https://loupewire.github.io/guides/block/"
             }
           ]
         }
@@ -125,7 +125,7 @@
       gtag('config', 'G-SE3C1NP6GV');
     </script>
   </head>
-  <body class="page page--guide page--guide-track-and-skip">
+  <body class="page page--guide page--guide-block">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="container site-header__inner">
@@ -170,9 +170,9 @@
             <ul class="guide-nav__list">
               <li><a href="/guides/first-capture/">Start here: your first capture</a></li>
               <li><a href="/guides/patterns/">Patterns: one rule, four places</a></li>
-              <li><a href="/guides/track-and-skip/" aria-current="page">Track and Skip</a></li>
+              <li><a href="/guides/track-and-skip/">Track and Skip</a></li>
               <li><a href="/guides/filter/">Filter the table</a></li>
-              <li><a href="/guides/block/">Block a request</a></li>
+              <li><a href="/guides/block/" aria-current="page">Block a request</a></li>
               <li><a href="/guides/header-rules/">Request header rules</a></li>
               <li><a href="/guides/mask/">Mask and the secret preset</a></li>
             </ul>
@@ -183,80 +183,93 @@
             <ol>
               <li><a href="/">Home</a></li>
               <li><a href="/guides/">Guides</a></li>
-              <li aria-current="page">Track and Skip</li>
+              <li aria-current="page">Block a request</li>
             </ol>
           </nav>
           <header class="guide__header">
-            <h1>Track and Skip</h1>
-            <p class="guide__lead">Two lists that decide what the tracker records at all. What Skip removes is gone for good, which is why the filter bar exists beside them.</p>
+            <h1>Block a request</h1>
+            <p class="guide__lead">Stop a request from ever leaving the browser, to prove a dependency or simulate an outage. The row stays in the table, marked, so you keep the evidence.</p>
             <p class="guide__updated">Updated <time datetime="2026-09-20">2026-09-20</time></p>
           </header>
           <nav class="guide__toc" aria-labelledby="toc-title">
             <p class="guide__toc-title" id="toc-title">On this page</p>
             <ol>
-              <li><a href="#what-each-list-does">What each list does</a></li>
-              <li><a href="#skip-wins-and-what-that-costs">Skip wins, and what that costs</a></li>
-              <li><a href="#this-window-or-every-window">This window, or every window</a></li>
+              <li><a href="#add-a-pattern">Add a pattern</a></li>
+              <li><a href="#a-blocked-request-still-appears">A blocked request still appears</a></li>
+              <li><a href="#who-blocked-it">Who blocked it</a></li>
+              <li><a href="#blocking-lives-and-dies-with-the-window">Blocking lives and dies with the window</a></li>
               <li><a href="#common-mistakes">Common mistakes</a></li>
               <li><a href="#not-in-this-version">Not in this version</a></li>
             </ol>
           </nav>
           <div class="prose guide__body">
-            <p>One news page is several hundred requests: fonts, images, analytics beacons, ad calls. The request
-            you opened the tracker for is somewhere in there. <strong>Track</strong> and <strong>Skip</strong> keep the noise out from the
-            start, before it ever becomes a row.</p>
-            <p>Both take a pattern. If you have not read
-            <a href="/guides/patterns/">Patterns: one rule, four places</a>, read it first — this page is about what these
-            two lists do with a pattern, not about how a pattern matches.</p>
-            <h2 id="what-each-list-does">What each list does</h2>
+            <p>A block pattern stops matching requests from being sent at all. The usual reasons: proving that a
+            page really depends on the endpoint you think it does, or simulating a third-party outage you cannot
+            arrange for real — an analytics host that is down, a payment provider that stops answering.</p>
+            <p>This is the only one of the four pattern lists whose effect leaves the tracker page. Track and Skip
+            decide what is recorded, Mask decides what is drawn; Block changes what your browser actually does.</p>
+            <p>Before you use it, read <a href="/guides/patterns/">Patterns: one rule, four places</a> — matching works the
+            same way, with one exception this page covers.</p>
+            <h2 id="add-a-pattern">Add a pattern</h2>
+            <p>Open the <strong>Block</strong> list in the toolbar and type a substring of the URLs you want stopped:
+            <code>doubleclick.net</code>, <code>/v2/reports</code>, <code>analytics.example.com</code>.</p>
+            <p>The note under the input is the whole feature in two sentences: &quot;These requests are never sent.
+            Blocking stops when this window closes, and a pattern broad enough to match a page will stop that
+            page from loading.&quot;</p>
+            <figure class="guide__figure"><img src="/assets/guides/block/01-block-input.webp" alt="The Block popover with analytics.example.com typed and added as a chip, the Block count reading 1, and the note about blocking under the input" width="1280" height="720" loading="lazy"><figcaption>One pattern, in force from the moment it is added.</figcaption></figure>
+            <p><strong>Block is the one list that refuses characters.</strong> Your pattern becomes a rule for the browser's own
+            rule engine, and <code>*</code>, <code>^</code> and <code>|</code> mean something to that engine — a rule written with them would
+            match URLs you never described, silently. They are refused, along with non-ASCII text, which the
+            browser rejects outright. The guide on patterns has the details and the way around the second one.</p>
+            <h2 id="a-blocked-request-still-appears">A blocked request still appears</h2>
+            <p>This is the part people do not expect. A blocked request is exactly the one you want to look at, so
+            it gets a row: method, URL, resource type, and a <code>BLOCKED</code> marker in the status column.</p>
+            <figure class="guide__figure"><img src="/assets/guides/block/02-blocked-row.webp" alt="The request table with one row reading BLOCKED in purple, for the URL matching the pattern, among ordinary rows with 200 and 404 statuses" width="1280" height="720" loading="lazy"><figcaption>Stopped, and still on the record. BLOCKED is purple rather than red: nothing failed, the product did what it was told.</figcaption></figure>
+            <p>Open it and the tabs do not all say the same thing, because they cannot:</p>
             <ul>
-            <li><strong>Track</strong> is an allow list. While it is empty, everything is recorded. The moment it has one
-            entry, only requests matching an entry are recorded.</li>
-            <li><strong>Skip</strong> is a deny list. Anything matching an entry is not recorded, whatever else says otherwise.</li>
+            <li><strong>Headers and Cookies are empty</strong>, and say why: the request was stopped before any header was
+            sent. They do not claim the request &quot;had no cookies&quot; — nobody knows what it would have carried.</li>
+            <li><strong>The Body tab still works.</strong> The browser reports a request body before the rule stops the
+            request, so a blocked POST still shows what it was about to send. That is often the reason you
+            blocked it.</li>
+            <li><strong>Meta names who blocked it</strong>, and puts the browser's own error string underneath rather than
+            replacing it. It also carries the duration, which for a blocked request is a fraction of a
+            millisecond — itself evidence that nothing went to the network.</li>
             </ul>
-            <p>The tracker applies them together, for every request:</p>
-            <blockquote>
-            <p>record it if Track is empty <strong>or</strong> the URL matches a Track pattern, <strong>and</strong> the URL matches no
-            Skip pattern.</p>
-            </blockquote>
-            <figure class="guide__figure"><img src="/assets/guides/track-and-skip/01-track-list.webp" alt="The Track popover holding the chip slash v2 slash orders, over a table of four rows that all contain that path" width="1280" height="720" loading="lazy"><figcaption>Track with one entry, typed before the page loaded: four rows out of the seventeen requests the page made.</figcaption></figure>
-            <h2 id="skip-wins-and-what-that-costs">Skip wins, and what that costs</h2>
-            <p>A URL matching both lists is <strong>not</strong> recorded. Skip is the more specific statement — you are naming
-            noise inside a region you otherwise want — so it wins.</p>
-            <p>What that costs is worth being plain about: a request Skip excluded leaves <strong>no trace at all</strong>. No
-            row, no counter, no &quot;3 requests hidden&quot; anywhere. Nothing in the window knows it happened, and
-            removing the pattern afterwards does not bring it back — patterns act from the moment they exist.</p>
-            <figure class="guide__figure"><img src="/assets/guides/track-and-skip/02-skip-wins.webp" alt="The Skip popover holding the chip cdn.example.com, over a table of fifteen rows with no cdn request among them" width="1280" height="720" loading="lazy"><figcaption>The same page load with one Skip entry: the two CDN requests were never recorded, and nothing here says so.</figcaption></figure>
-            <p>That is the whole reason the <a href="/guides/filter/">filter bar</a> exists beside these lists. The filter
-            only hides, so a mistyped filter costs you nothing. A mistyped Skip pattern costs you the evidence.</p>
-            <p><strong>Use Skip for noise you are sure about</strong> — a telemetry host, an ad network, a polling endpoint you
-            already understand. <strong>Use the filter while you are still looking.</strong></p>
-            <h2 id="this-window-or-every-window">This window, or every window</h2>
-            <p>Patterns typed in the tracker's toolbar belong to this window and die with it. Patterns in Settings
-            are stored and apply to every tracker window from now on, and they are shown here too, labelled
-            &quot;From options:&quot; and without a remove button — you remove them where you wrote them.</p>
-            <figure class="guide__figure"><img src="/assets/guides/track-and-skip/03-global.webp" alt="The Settings page, Global patterns, with two chips under Skip URLs having" width="1280" height="720" loading="lazy"><figcaption>The same lists in Settings. These two apply to every window, until removed here.</figcaption></figure>
-            <p>A global Skip list is the one most worth building: the hosts you never want to see are the same
-            every day. Keep session patterns for the thing you are debugging this hour.</p>
+            <figure class="guide__figure"><img src="/assets/guides/block/03-blocked-detail.webp" alt="The detail panel of a blocked request: the Headers tab reading Stopped before any header was sent" width="1280" height="720" loading="lazy"><figcaption>Empty because nothing was sent, and it says so rather than claiming there were no cookies.</figcaption></figure><figure class="guide__figure"><img src="/assets/guides/block/04-blocked-meta.webp" alt="The Meta tab of the same request: Blocked by reading One of your block patterns, Error reading net colon colon ERR_BLOCKED_BY_CLIENT, and a duration of 0.196 milliseconds" width="1280" height="720" loading="lazy"><figcaption>The verdict, the browser's own words under it, and a duration of 0.196 ms.</figcaption></figure>
+            <h2 id="who-blocked-it">Who blocked it</h2>
+            <p><code>BLOCKED</code> does not always mean you. The browser reports the same error for any extension's blocking
+            rule, so with an ad blocker installed most blocked rows are somebody else's. The tracker asks, once,
+            at the moment of the block, whether one of <strong>your</strong> patterns matched — and the row keeps that answer
+            for good.</p>
+            <p>That means the attribution never changes when you edit your pattern list afterwards. A row says what
+            was true when the block happened, which is the only thing evidence is allowed to do.</p>
+            <p>On Brave there is a third case, and it is invisible: Shields blocks below the level any extension
+            can see, so a request Shields stopped produces no row at all. If traffic you expect is simply
+            missing, check Shields before blaming the tracker.</p>
+            <h2 id="blocking-lives-and-dies-with-the-window">Blocking lives and dies with the window</h2>
+            <p>Close the tracker and every block pattern stops. Open it again and the patterns you kept come back
+            into force.</p>
+            <p>This is deliberate and it is the safety property of the feature. The browser rule a pattern becomes
+            would otherwise outlive the page that wrote it — and a rule left behind is invisible: no window
+            open, nothing to inspect, and a site that simply does not load. Nobody connects that with an
+            extension window they closed an hour ago. So the contract is simple: <strong>the tracker window is open,
+            therefore blocking is in force.</strong></p>
             <h2 id="common-mistakes">Common mistakes</h2>
             <ul>
-            <li><strong>One Track entry that excludes everything else.</strong> The list is empty by default for a reason. Add
-            one entry and the redirect you were about to follow, the auth call you did not think about and the
-            CDN request that explains the layout are all gone. Prefer Skip, or the filter.</li>
-            <li><strong>Skipping the host you are debugging.</strong> <code>example.com</code> in Skip removes the API calls too. Name the
-            narrowest thing that is really noise.</li>
-            <li><strong>Expecting Skip to free memory.</strong> It keeps new requests out; it does not remove rows already
-            captured, and it does not give back what they cost. Use Clear for that.</li>
-            <li><strong>Expecting Skip to hide rows you can still get back.</strong> That is the filter. Skip is not a quieter
-            filter, it is a decision not to record.</li>
-            <li><strong>Typing a pattern into the tracker that Settings already has.</strong> It is refused, with &quot;Already
-            applied from options&quot; — the rule is already in force, the chip is already on screen.</li>
+            <li><strong>A pattern broad enough to match the page.</strong> <code>example.com</code> stops the document request too, and
+            the tab shows an error page instead of your app. Name the narrowest thing you mean.</li>
+            <li><strong>Expecting Block to quieten the table.</strong> It does the opposite — it adds rows, marked. If you
+            want fewer rows, that is <a href="/guides/track-and-skip/">Skip</a> or the filter.</li>
+            <li><strong>Expecting it to apply everywhere, all the time.</strong> It applies while the tracker is open. That is
+            the whole design, not a limitation waiting to be lifted.</li>
+            <li><strong>Reading <code>BLOCKED</code> as &quot;my pattern did this&quot;.</strong> Check the Meta tab. Another extension produces the
+            same row.</li>
             </ul>
             <h2 id="not-in-this-version">Not in this version</h2>
-            <p>Regular expressions, wildcards and matching by HTTP method are on the roadmap. So is counting what
-            the patterns excluded: it is useful for noticing an over-eager Skip, and it is also a count derived
-            from traffic the product deliberately did not record, which is worth thinking through before
-            building.</p>
+            <p>Redirecting or rewriting a URL is deliberately not here — it is a different product from an
+            inspector, and the roadmap says so rather than &quot;later&quot;. Regular expressions and matching by method
+            are planned. So is blocking by resource type rather than by URL.</p>
 
           </div>
         </article>
