@@ -75,6 +75,8 @@ h4 {
 
 p {
   margin: 0;
+  /* No single word alone on the last line; browsers without support ignore it. */
+  text-wrap: pretty;
 }
 
 a {
@@ -137,7 +139,7 @@ pre code {
 }
 
 .section__header {
-  max-inline-size: 640px;
+  max-inline-size: 840px;
   margin-block-end: var(--loupewire-space-3xl);
 }
 
