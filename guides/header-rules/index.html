@@ -60,13 +60,20 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "Organization",
+          "@id": "https://loupewire.github.io/#organization",
+          "name": "Loupewire",
+          "url": "https://loupewire.github.io/",
+          "logo": "https://loupewire.github.io/assets/brand/favicon-512.png"
+        },
+        {
           "@type": "TechArticle",
           "@id": "https://loupewire.github.io/guides/header-rules/#article",
           "headline": "Request header rules",
           "description": "Add or set a request header on every request that matches a URL filter, see it land on live traffic in the same window, and pause it with one click.",
           "url": "https://loupewire.github.io/guides/header-rules/",
-          "datePublished": "2026-09-20",
-          "dateModified": "2026-09-20",
+          "datePublished": "2026-09-20T00:00:00+07:00",
+          "dateModified": "2026-09-20T00:00:00+07:00",
           "inLanguage": "en-US",
           "author": {
             "@id": "https://loupewire.github.io/#organization"
@@ -75,7 +82,10 @@
             "@id": "https://loupewire.github.io/#organization"
           },
           "about": {
-            "@id": "https://loupewire.github.io/#software"
+            "@type": "SoftwareApplication",
+            "@id": "https://loupewire.github.io/#software",
+            "name": "Loupewire",
+            "url": "https://loupewire.github.io/"
           },
           "image": "https://loupewire.github.io/assets/guides/header-rules/04-see-it-land.webp"
         },
