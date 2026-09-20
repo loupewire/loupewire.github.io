@@ -37,6 +37,13 @@
   background: var(--loupewire-brand-primary-subtle);
 }
 
+/* On the tinted card the 12px step label in brand-primary measured 4.46:1
+   (Lighthouse, 2026-09-20), a hair under 4.5; the active step of the same
+   colour clears it in both themes. */
+.card--accent .card__step {
+  color: var(--loupewire-brand-primary-active);
+}
+
 .card__step {
   font-family: var(--loupewire-font-family-mono);
   font-size: var(--loupewire-font-size-sm);
