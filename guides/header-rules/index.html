@@ -225,7 +225,8 @@
             empty value is allowed; it is a legal header value.</li>
             <li><strong>URL filter</strong>: a plain, case-insensitive substring of the URL, such as <code>api.example.com</code> or
             <code>/v2/</code>. Leave it empty and the rule applies to every request the browser makes while the tracker
-            is open.</li>
+            is open. It follows the same matching rules as the four pattern lists, which
+            <a href="/guides/patterns/">Patterns: one rule, four places</a> explains once for all five inputs.</li>
             </ul>
             <figure class="guide__figure"><img src="/assets/guides/header-rules/02-type-rule.webp" alt="The rules panel with x-debug-user, qa-thea-vu and api.example.com typed into the three fields" width="1280" height="720" loading="lazy"><figcaption>Name, value and the URL filter, before Add.</figcaption></figure>
             <p>Click <strong>Add</strong>. The rule is in force the moment it lands: the row appears with its checkbox ticked

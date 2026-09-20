@@ -227,6 +227,10 @@
             it is below.</li>
             </ul>
             <p>Matching by regular expression or by HTTP method is on the roadmap and not available today.</p>
+            <p>Each list has its own guide, and this page is the part they all share:
+            <a href="/guides/track-and-skip/">Track and Skip</a>, <a href="/guides/block/">Block a request</a>,
+            <a href="/guides/mask/">Mask and the secret preset</a>, and the URL filter on
+            <a href="/guides/header-rules/">request header rules</a>.</p>
             <h2 id="mask-is-the-one-that-does-not-match-a-url">Mask is the one that does not match a URL</h2>
             <p>Mask matches the <strong>name of a field</strong> — a header, a cookie, a form field — and covers that field's
             <strong>value</strong>. It never looks at a URL.</p>
@@ -326,7 +330,8 @@
             <li><strong>Expecting Skip to free up memory.</strong> Skip keeps new requests out; it does not remove rows already
             captured, and it does not give back what they cost. Use Clear for that.</li>
             <li><strong>Expecting Block to hide rows.</strong> A blocked request is exactly the one you want to see, so it
-            still appears in the table, marked as blocked. Block is not a quieter Skip.</li>
+            still appears in the table, marked as blocked. Block is not a quieter Skip — see
+            <a href="/guides/block/">Block a request</a>.</li>
             <li><strong>The same word in two lists.</strong> Mask <code>token</code> and Skip <code>token</code> are unrelated rules about different
             things, and both are accepted. Only a duplicate <em>within one list</em> is refused.</li>
             </ul>
