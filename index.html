@@ -260,18 +260,22 @@
 
       <section id="limits" class="section limits">
         <div class="container">
-          <div class="limits__box">
-            <p class="section__eyebrow">Honest limits</p>
-            <h2>No response bodies, on purpose</h2>
+          <div class="limits__box split">
+            <div class="split__intro">
+              <p class="section__eyebrow">Honest limits</p>
+              <h2>No response bodies, on purpose</h2>
+            </div>
+            <div class="limits__body">
             <p>Exports contain request and response headers, cookies, request bodies, timing and redirects. They do not contain response bodies. The browser API this extension uses to observe traffic does not expose them, and Loupewire does not attach a debugger to your tabs to get them. For response bodies, use DevTools alongside Loupewire.</p>
             <p>Loupewire also composes no requests and injects nothing into the pages you visit. It observes and edits what the browser sends on its own, and it stands next to DevTools rather than replacing it.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="video" class="section video">
         <div class="container">
-          <header class="section__header">
+          <header class="section__header section__header--centered">
             <p class="section__eyebrow">36 seconds, no narration</p>
             <h2>Attach a HAR to a ticket without leaking tokens</h2>
           </header>

@@ -141,6 +141,13 @@ pre code {
   margin-block-end: var(--loupewire-space-3xl);
 }
 
+/* For a section whose content is centred (the video): no width cap, so a
+   heading is not folded in two by the 640px column, and centred text. */
+.section__header--centered {
+  max-inline-size: none;
+  text-align: center;
+}
+
 .section__eyebrow {
   display: inline-block;
   margin-block-end: var(--loupewire-space-sm);

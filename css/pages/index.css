@@ -111,21 +111,24 @@
 }
 
 .limits__box {
-  max-inline-size: 72ch;
   padding: var(--loupewire-space-2xl);
   border-inline-start: 3px solid var(--loupewire-status-warning);
   border-radius: var(--loupewire-radius-md);
   background: var(--loupewire-surface);
 }
 
-.limits__box > p {
-  margin-block-start: var(--loupewire-space-md);
+.limits__box h2 {
+  margin-block-start: var(--loupewire-space-sm);
+  font-size: var(--loupewire-display-md);
+}
+
+.limits__body {
+  max-inline-size: 66ch;
   color: var(--loupewire-text-muted);
 }
 
-.limits__box > h2 {
-  margin-block-start: var(--loupewire-space-sm);
-  font-size: var(--loupewire-display-md);
+.limits__body p + p {
+  margin-block-start: var(--loupewire-space-md);
 }
 
 /* Video. */
