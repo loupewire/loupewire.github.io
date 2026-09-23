@@ -44,10 +44,6 @@
   font-size: var(--loupewire-font-size-lg);
 }
 
-.btn--block {
-  inline-size: 100%;
-}
-
 .btn--primary {
   background: var(--loupewire-brand-primary);
   border-color: var(--loupewire-brand-primary);
