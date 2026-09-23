@@ -30,6 +30,14 @@
     color var(--loupewire-transition-fast) var(--loupewire-ease);
 }
 
+/* The install button's store logo stays full colour on every theme: it names
+   the browser the click installs into, and a tinted logo would stop doing that. */
+.btn__icon {
+  flex-shrink: 0;
+  inline-size: 1.25em;
+  block-size: 1.25em;
+}
+
 .btn--lg {
   min-block-size: 48px;
   padding-inline: var(--loupewire-space-xl);

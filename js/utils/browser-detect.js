@@ -26,13 +26,20 @@
     return 'other';
   }
 
+  var EDGE_LOGO = '/assets/logos/microsoft-edge.svg';
+
   var browser = detect();
 
   if (browser === 'edge') {
     var buttons = document.querySelectorAll('a[data-cta][data-edge-href]');
     for (var i = 0; i < buttons.length; i += 1) {
       buttons[i].setAttribute('href', buttons[i].getAttribute('data-edge-href'));
-      buttons[i].textContent = 'Add to Edge';
+      // Icon and label are swapped separately: the button's own textContent
+      // would replace the logo along with the words.
+      var icon = buttons[i].querySelector('.btn__icon');
+      if (icon) icon.setAttribute('src', EDGE_LOGO);
+      var label = buttons[i].querySelector('.btn__label');
+      if (label) label.textContent = 'Add to Edge';
     }
   }
 
