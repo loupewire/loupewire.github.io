@@ -1,9 +1,30 @@
-/* Home page sections. The hero text follows the theme for full contrast;
-   only the plate behind the screenshot carries the brand gradient, the way
-   the store hero does. */
+/* Home page sections, in page order: hero with proof strip, video,
+   workflow, differentiators, the DevTools comparison, privacy, FAQ,
+   closing steps. The hero text follows the theme for full
+   contrast; the brand shows as a tint behind the screenshot, not a plate. */
 
 .hero {
-  padding-block: var(--loupewire-space-4xl) var(--loupewire-section-gap);
+  position: relative;
+  padding-block: var(--loupewire-space-4xl) var(--loupewire-space-3xl);
+  overflow: hidden;
+}
+
+/* A soft wash of the brand behind the screenshot side, so the hero reads as
+   one surface rather than text beside a picture. Tokens only: the wash is
+   the brand's subtle tint, which each theme already defines. */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset-block-start: -20%;
+  inset-inline-end: -10%;
+  inline-size: 70%;
+  block-size: 120%;
+  background: radial-gradient(closest-side, var(--loupewire-brand-primary-subtle), transparent);
+  pointer-events: none;
+}
+
+.hero > .container {
+  position: relative;
 }
 
 .hero__inner {
@@ -38,26 +59,215 @@
   margin-block-start: var(--loupewire-space-2xl);
 }
 
-.hero__note {
-  margin-block-start: var(--loupewire-space-lg);
+.btn__glyph {
+  flex-shrink: 0;
+  inline-size: 1em;
+  block-size: 1em;
+}
+
+.store-links {
+  margin-block-start: var(--loupewire-space-md);
   font-size: var(--loupewire-font-size-md);
   color: var(--loupewire-text-muted);
 }
 
+/* Short trust facts under the buttons, each behind a check mark, wrapping
+   as whole items on a narrow screen. */
+.hero__facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--loupewire-space-xs) var(--loupewire-space-lg);
+  margin: var(--loupewire-space-lg) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--loupewire-font-size-md);
+  color: var(--loupewire-text-muted);
+}
+
+.hero__facts li {
+  position: relative;
+  padding-inline-start: var(--loupewire-space-lg);
+}
+
+.hero__facts li::before {
+  content: '';
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0.35em;
+  inline-size: 0.45em;
+  block-size: 0.75em;
+  border-block-end: 2px solid var(--loupewire-status-success);
+  border-inline-end: 2px solid var(--loupewire-status-success);
+  transform: rotate(45deg);
+}
+
+/* The screenshot sits in a drawn window, so a visitor sees an application
+   window of its own rather than a web page: that is how the tracker opens. */
+
 .hero__figure {
+  position: relative;
   margin: 0;
 }
 
-.hero__frame {
-  padding: clamp(12px, 2.5vw, 28px);
-  border-radius: var(--loupewire-radius-xl);
-  background: var(--loupewire-hero-gradient);
+.window {
+  overflow: hidden;
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-lg);
+  background: var(--loupewire-surface);
   box-shadow: var(--loupewire-shadow-lg);
 }
 
-.hero__frame img {
-  border-radius: var(--loupewire-radius-md);
+.window__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--loupewire-space-md);
+  padding: var(--loupewire-space-sm) var(--loupewire-space-md);
+  border-block-end: 1px solid var(--loupewire-border);
+  background: var(--loupewire-surface-raised);
+  font-size: var(--loupewire-font-size-sm);
+  color: var(--loupewire-text-muted);
+}
+
+.window__dots {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.window__dots span {
+  inline-size: 10px;
+  block-size: 10px;
+  border-radius: var(--loupewire-radius-full);
+  background: var(--loupewire-border-strong);
+  opacity: 0.5;
+}
+
+.window__title {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--loupewire-space-xs);
+  font-weight: var(--loupewire-font-weight-semibold);
+  color: var(--loupewire-text);
+}
+
+.window__shortcut {
+  margin-inline-start: auto;
+  padding: 0.1em 0.5em;
+  border: 1px solid var(--loupewire-border-strong);
+  border-radius: var(--loupewire-radius-sm);
+  font-family: var(--loupewire-font-family-mono);
+  font-size: var(--loupewire-font-size-xs);
+}
+
+.window__shot {
+  inline-size: 100%;
+}
+
+/* The masked value, lifted out of the screenshot at a readable size. It is
+   decorative (the image's alt text already says the header is masked), and
+   the value is made up: first and last characters, the rest covered, the
+   way the product renders it. */
+.hero__pill {
+  position: absolute;
+  inset-block-end: calc(-1 * var(--loupewire-space-lg));
+  inset-inline-start: calc(-1 * var(--loupewire-space-lg));
+  display: flex;
+  align-items: center;
+  gap: var(--loupewire-space-sm);
+  padding: var(--loupewire-space-sm) var(--loupewire-space-md);
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-full);
+  background: var(--loupewire-surface);
   box-shadow: var(--loupewire-shadow-md);
+  font-family: var(--loupewire-font-family-mono);
+  font-size: var(--loupewire-font-size-sm);
+  white-space: nowrap;
+}
+
+.hero__pill svg {
+  flex-shrink: 0;
+  inline-size: 16px;
+  block-size: 16px;
+  color: var(--loupewire-accent);
+}
+
+.hero__pill-name {
+  color: var(--loupewire-text-muted);
+}
+
+.hero__pill-value {
+  padding: 0.05em 0.4em;
+  border-radius: var(--loupewire-radius-sm);
+  background: var(--loupewire-mask-bg);
+  color: var(--loupewire-mask-text);
+}
+
+/* On a phone the pill would cover the screenshot it describes. */
+@media (max-width: 599px) {
+  .hero__pill {
+    display: none;
+  }
+}
+
+/* Proof strip: four facts, one row on a wide screen, two by two on a
+   tablet, one column on a phone. */
+
+.proof {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--loupewire-space-lg);
+  margin: var(--loupewire-space-4xl) 0 0;
+  padding: var(--loupewire-space-xl) 0 0;
+  border-block-start: 1px solid var(--loupewire-border);
+  list-style: none;
+}
+
+.proof__item {
+  display: flex;
+  gap: var(--loupewire-space-md);
+  align-items: flex-start;
+}
+
+.proof__icon {
+  flex-shrink: 0;
+  inline-size: 40px;
+  block-size: 40px;
+  padding: 9px;
+  border-radius: var(--loupewire-radius-md);
+  background: var(--loupewire-brand-primary-subtle);
+  color: var(--loupewire-brand-primary-active);
+}
+
+.proof__item p {
+  font-size: var(--loupewire-font-size-md);
+  color: var(--loupewire-text-muted);
+}
+
+.proof__item strong {
+  display: block;
+  font-size: var(--loupewire-font-size-lg);
+  color: var(--loupewire-text);
+}
+
+/* Video: straight after the hero, where "Watch the intro" lands. */
+
+.video {
+  padding-block-start: var(--loupewire-space-3xl);
+}
+
+.video__caption {
+  max-inline-size: 72ch;
+  margin-inline: auto;
+  margin-block-start: var(--loupewire-space-lg);
+  font-size: var(--loupewire-font-size-md);
+  color: var(--loupewire-text-muted);
+  text-align: center;
+}
+
+/* Workflow on a tinted band, so the five steps read as one block between
+   the video and the differentiators. */
+
+.workflow {
+  background: var(--loupewire-surface-raised);
 }
 
 /* Differentiators: text beside an image, alternating sides. */
@@ -94,6 +304,21 @@
   color: var(--loupewire-text-muted);
 }
 
+.feature__link {
+  display: inline-block;
+  margin-block-start: var(--loupewire-space-lg);
+  font-weight: var(--loupewire-font-weight-semibold);
+  text-decoration: none;
+}
+
+.feature__link::after {
+  content: ' →';
+}
+
+.feature__link:hover {
+  text-decoration: underline;
+}
+
 .feature__figure {
   margin: 0;
 }
@@ -104,45 +329,166 @@
   box-shadow: var(--loupewire-shadow-md);
 }
 
-/* Limits: one framed statement. */
+/* DevTools comparison. A real table: two tools, five rows, and each cell
+   says its answer in words, so the check and dash marks only repeat it. */
 
-.limits {
-  padding-block: 0;
+.devtools {
+  padding-block-start: 0;
 }
 
-.limits__box {
-  padding: var(--loupewire-space-2xl);
-  border-inline-start: 3px solid var(--loupewire-status-warning);
-  border-radius: var(--loupewire-radius-md);
+.compare-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--loupewire-border);
+  border-radius: var(--loupewire-radius-lg);
   background: var(--loupewire-surface);
 }
 
-.limits__box h2 {
-  margin-block-start: var(--loupewire-space-sm);
-  font-size: var(--loupewire-display-md);
-}
-
-.limits__body {
-  max-inline-size: 66ch;
-  color: var(--loupewire-text-muted);
-}
-
-.limits__body p + p {
-  margin-block-start: var(--loupewire-space-md);
-}
-
-/* Video. */
-
-.video__caption {
-  max-inline-size: 72ch;
-  margin-inline: auto;
-  margin-block-start: var(--loupewire-space-lg);
+.compare {
+  inline-size: 100%;
+  min-inline-size: 560px;
+  border-collapse: collapse;
   font-size: var(--loupewire-font-size-md);
-  color: var(--loupewire-text-muted);
-  text-align: center;
 }
 
-/* Closing call to action. */
+.compare th,
+.compare td {
+  padding: var(--loupewire-space-md) var(--loupewire-space-lg);
+  border-block-end: 1px solid var(--loupewire-border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.compare tbody tr:last-child > * {
+  border-block-end: 0;
+}
+
+.compare thead th {
+  font-size: var(--loupewire-font-size-sm);
+  font-weight: var(--loupewire-font-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--loupewire-text-muted);
+}
+
+.compare tbody th {
+  inline-size: 34%;
+  font-weight: var(--loupewire-font-weight-semibold);
+}
+
+.compare td {
+  color: var(--loupewire-text-muted);
+}
+
+.compare .compare__ours {
+  background: var(--loupewire-brand-primary-subtle);
+  color: var(--loupewire-text);
+}
+
+.compare thead .compare__ours {
+  color: var(--loupewire-brand-primary-active);
+}
+
+.compare__yes,
+.compare__no {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--loupewire-space-sm);
+}
+
+.compare__yes::before,
+.compare__no::before {
+  flex-shrink: 0;
+  font-weight: var(--loupewire-font-weight-semibold);
+}
+
+.compare__yes::before {
+  content: '✓';
+  color: var(--loupewire-status-success);
+}
+
+.compare__no::before {
+  content: '–';
+  color: var(--loupewire-text-muted);
+}
+
+/* On a phone the two tools cannot sit side by side without hiding the
+   second column behind a scroll, so each row becomes its own block and
+   every cell names its tool. */
+@media (max-width: 639px) {
+  .compare {
+    min-inline-size: 0;
+  }
+
+  .compare thead {
+    position: absolute;
+    inline-size: 1px;
+    block-size: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .compare tr,
+  .compare th,
+  .compare td {
+    display: block;
+    inline-size: auto;
+  }
+
+  .compare tbody tr {
+    border-block-end: 1px solid var(--loupewire-border);
+  }
+
+  .compare tbody tr:last-child {
+    border-block-end: 0;
+  }
+
+  .compare th,
+  .compare td {
+    border-block-end: 0;
+    padding-block: var(--loupewire-space-xs);
+  }
+
+  .compare tbody th {
+    inline-size: auto;
+    padding-block-start: var(--loupewire-space-md);
+  }
+
+  .compare td:last-child {
+    padding-block-end: var(--loupewire-space-md);
+  }
+
+  .compare td::before {
+    content: attr(data-label) ': ';
+    font-weight: var(--loupewire-font-weight-semibold);
+    color: var(--loupewire-text-muted);
+  }
+}
+
+/* Privacy: the listing's privacy paragraph as the lead, then the three
+   facts side by side on a wide screen. Permissions are not explained here
+   until ROADMAP 2.11 settles the list (positioning decision log,
+   2026-09-24). */
+
+.privacy {
+  background: var(--loupewire-surface-raised);
+}
+
+.privacy .section__lead {
+  max-inline-size: 72ch;
+}
+
+.privacy__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--loupewire-space-lg) var(--loupewire-space-2xl);
+}
+
+.privacy__facts li + li {
+  margin-block-start: 0;
+}
+
+/* Closing call to action: the three steps from install to export, then
+   the button. The steps are the same promise the hero makes, made concrete. */
 
 .cta {
   padding-block-end: 0;
@@ -161,12 +507,55 @@
   margin-inline: auto;
 }
 
-.cta__body {
-  margin-block-start: var(--loupewire-space-lg);
+.cta__steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--loupewire-space-xl);
+  max-inline-size: 900px;
+  margin: var(--loupewire-space-3xl) auto 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: cta-step;
+  text-align: start;
+}
+
+.cta__step {
+  position: relative;
+  padding-block-start: var(--loupewire-space-3xl);
+  counter-increment: cta-step;
+}
+
+.cta__step::before {
+  content: counter(cta-step);
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  display: grid;
+  place-items: center;
+  inline-size: 36px;
+  block-size: 36px;
+  border-radius: var(--loupewire-radius-full);
+  background: var(--loupewire-brand-primary);
+  color: var(--loupewire-brand-primary-ink);
+  font-weight: var(--loupewire-font-weight-semibold);
+}
+
+.cta__step h3 {
+  font-size: var(--loupewire-display-sm);
+}
+
+.cta__step p {
+  margin-block-start: var(--loupewire-space-sm);
+  font-size: var(--loupewire-font-size-md);
   color: var(--loupewire-text-muted);
 }
 
-.cta__body kbd {
+.cta kbd,
+.window kbd {
+  color: var(--loupewire-text);
+}
+
+.cta__step kbd {
   padding: 0.1em 0.4em;
   border: 1px solid var(--loupewire-border-strong);
   border-block-end-width: 2px;
@@ -178,11 +567,11 @@
 .cta__actions {
   display: flex;
   justify-content: center;
-  margin-block-start: var(--loupewire-space-2xl);
+  margin-block-start: var(--loupewire-space-3xl);
 }
 
 .cta__note {
-  margin-block-start: var(--loupewire-space-md);
+  margin-block-start: var(--loupewire-space-sm);
   font-size: var(--loupewire-font-size-sm);
   color: var(--loupewire-text-muted);
 }

@@ -3,7 +3,7 @@
   marquee (docs/store-assets/chrome-web-store-promo/promo-marquee.svg): the
   mark's plate gradient, the mark, the wordmark, one tagline, the browser
   line. Rendered to og-image.png by `pnpm run icons`. Text is the copy
-  document's OG section (docs/release/marketing/draft-landing-copy.md).
+  document's OG section (docs/release/marketing/landing-copy.md).
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <defs>

@@ -170,110 +170,57 @@
             <p class="hero__lead">Loupewire captures the HTTP traffic of every tab in one window, masks secrets on screen and in the file, and exports a HAR you can attach to a ticket. Nothing leaves your device.</p>
             <div class="hero__actions">
               <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/dkoclbklglebhboiodckkicoajbcmbjd" data-cta="hero" data-edge-href="https://microsoftedge.microsoft.com/addons/detail/fobjeeglpkfdalljagicbgelbdmhlhgf"><img class="btn__icon" src="/assets/logos/google-chrome.svg" alt="" width="20" height="20"><span class="btn__label">Add to Chrome</span></a>
-              <a class="btn btn--secondary btn--lg" href="#video">Watch the 36-second intro</a>
+              <a class="btn btn--secondary btn--lg" href="#video">
+                <svg class="btn__glyph" aria-hidden="true" focusable="false" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                <span>Watch the 36-second intro</span>
+              </a>
             </div>
-            <p class="hero__note">No account. No telemetry. Captured traffic never leaves the browser.</p>
-          </div>
-          <figure class="hero__figure">
-            <div class="hero__frame">
-              <img src="/assets/screenshots/02-headers-masked.webp" width="1280" height="720" alt="The Loupewire tracker window listing requests from several hosts, with the Authorization header masked in the detail panel" fetchpriority="high">
-            </div>
-          </figure>
-        </div>
-      </section>
-
-      <section id="workflow" class="section workflow">
-        <div class="container">
-          <header class="section__header">
-            <p class="section__eyebrow">From bug reproduced to ticket attached</p>
-            <h2>One window for the whole path</h2>
-            <p class="section__lead">A bug report has five steps. Loupewire lands on each one, and the fourth is the reason it exists.</p>
-          </header>
-          <ol class="cards cards--steps">
-            <li class="card">
-              <p class="card__step">1 · Reproduce</p>
-              <h3 class="card__title">Set up the request</h3>
-              <p class="card__body">Add or set a request header for every URL that matches a pattern: a token for staging, a feature flag, a tenant. Block an endpoint to see how the page copes without it.</p>
-              <a class="card__link" href="/guides/header-rules/">How header rules work</a>
-            </li>
-            <li class="card">
-              <p class="card__step">2 · Observe</p>
-              <h3 class="card__title">See the whole flow</h3>
-              <p class="card__body">Every tab, popup and redirect lands in one table. A login that bounces through three hosts reads as one list, not three DevTools windows.</p>
-              <a class="card__link" href="/guides/first-capture/">Your first capture</a>
-            </li>
-            <li class="card">
-              <p class="card__step">3 · Isolate</p>
-              <h3 class="card__title">Find the failing request</h3>
-              <p class="card__body">Track or skip URLs while capturing. Filter by URL, method, status, date and cache state with <code>&amp;</code> and <code>|</code>. Pause, find text inside a request, clear the noise.</p>
-              <a class="card__link" href="/guides/filter/">How filtering works</a>
-            </li>
-            <li class="card card--accent">
-              <p class="card__step">4 · Evidence</p>
-              <h3 class="card__title">Hide the secrets, keep the proof</h3>
-              <p class="card__body">Tokens and cookies are masked before they reach the screen and before they reach the file. Export the capture, the filtered rows or the selection as HAR or JSON.</p>
-              <a class="card__link" href="/guides/export/">Export and copy</a>
-            </li>
-            <li class="card">
-              <p class="card__step">5 · Return</p>
-              <h3 class="card__title">Pick up where you left off</h3>
-              <p class="card__body">Saved sessions and environment profiles are on the way, so tomorrow's ticket starts from today's setup.</p>
-            </li>
-          </ol>
-        </div>
-      </section>
-
-      <section id="why" class="section why">
-        <div class="container">
-          <header class="section__header">
-            <p class="section__eyebrow">Why Loupewire</p>
-            <h2>Masked before the file exists</h2>
-          </header>
-          <div class="feature">
-            <div class="feature__copy">
-              <h3>Masking at the source</h3>
-              <p>A HAR file is a credential: the tokens inside it are live. Sanitizers clean a file after it exists. Loupewire masks values on screen and in every export before a file exists, so a screenshot and a HAR are both safe to attach without a second pass. A built-in preset covers the usual secret-bearing headers and cookies out of the box.</p>
-            </div>
-            <figure class="feature__figure">
-              <img src="/assets/screenshots/04-export-masked.webp" width="1280" height="720" alt="The export dialog with masking on and the selected rows about to be written to a HAR file" loading="lazy">
-            </figure>
-          </div>
-          <div class="feature feature--reverse">
-            <div class="feature__copy">
-              <h3>Every tab in one window</h3>
-              <p>DevTools is per tab and forgets on navigation unless you remember to preserve the log. Flows that cross tabs, such as SSO, OAuth, 3-D Secure and vendor checkout, are exactly the ones you are asked to document. Loupewire records all of them in one tracker window you can leave open all day.</p>
-            </div>
-            <figure class="feature__figure">
-              <img src="/assets/video/intro-poster.jpg" width="1280" height="720" alt="The tracker table filling with requests to app, api, cdn and auth hosts of one site" loading="lazy">
-            </figure>
-          </div>
-          <div class="feature">
-            <div class="feature__copy">
-              <h3>On your device, and only there</h3>
-              <p>Everything runs in the browser. Captured headers, cookies, bodies and URLs stay in the tracker window and are never written to disk unless you export them. The extension makes no network requests of its own. No telemetry, no analytics, no crash reporting, no account.</p>
-            </div>
-            <ul class="checklist">
-              <li>Captured traffic lives in the tracker window's memory and is gone when it closes</li>
-              <li>Your patterns, rules and settings stay in the browser's local extension storage</li>
-              <li>Nothing is injected into the pages you visit</li>
-              <li>The <a href="/privacy-policy/">privacy policy</a> says the same thing in more words</li>
+            <p class="store-links">Listed on the <a href="https://chromewebstore.google.com/detail/dkoclbklglebhboiodckkicoajbcmbjd" data-cta="hero-store">Chrome Web Store</a> and <a href="https://microsoftedge.microsoft.com/addons/detail/fobjeeglpkfdalljagicbgelbdmhlhgf" data-cta="hero-store">Edge Add-ons</a></p>
+            <ul class="hero__facts">
+              <li>Free to use</li>
+              <li>No signup</li>
+              <li>Captured traffic never leaves the browser</li>
             </ul>
           </div>
+          <figure class="hero__figure">
+            <div class="window">
+              <div class="window__bar" aria-hidden="true">
+                <span class="window__dots"><span></span><span></span><span></span></span>
+                <span class="window__title">
+                  <img src="/assets/brand/mark.svg" alt="" width="16" height="16">
+                  Loupewire tracker
+                </span>
+                <kbd class="window__shortcut">Ctrl+Shift+1</kbd>
+              </div>
+              <img class="window__shot" src="/assets/screenshots/02-headers-masked.webp" width="1280" height="720" alt="The Loupewire tracker window listing requests from several hosts, with the Authorization header masked in the detail panel" fetchpriority="high">
+            </div>
+            <p class="hero__pill" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+              <span class="hero__pill-name">authorization</span>
+              <span class="hero__pill-value">Bearer e••••••••••••Q5c</span>
+            </p>
+          </figure>
         </div>
-      </section>
 
-      <section id="limits" class="section limits">
         <div class="container">
-          <div class="limits__box split">
-            <div class="split__intro">
-              <p class="section__eyebrow">Honest limits</p>
-              <h2>No response bodies, on purpose</h2>
-            </div>
-            <div class="limits__body">
-            <p>Exports contain request and response headers, cookies, request bodies, timing and redirects. They do not contain response bodies. The browser API this extension uses to observe traffic does not expose them, and Loupewire does not attach a debugger to your tabs to get them. For response bodies, use DevTools alongside Loupewire.</p>
-            <p>Loupewire also composes no requests and injects nothing into the pages you visit. It observes and edits what the browser sends on its own, and it stands next to DevTools rather than replacing it.</p>
-            </div>
-          </div>
+          <ul class="proof">
+            <li class="proof__item">
+              <svg class="proof__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="13" height="12" rx="2"/><path d="M8 8V6a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-3"/></svg>
+              <p><strong>Every tab, one window</strong> Popups and redirects included</p>
+            </li>
+            <li class="proof__item">
+              <svg class="proof__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M10.6 5.1A9.8 9.8 0 0 1 12 5c5 0 9 4.5 10 7a13 13 0 0 1-2.6 3.6M6.6 6.6C4.4 8 2.8 10.2 2 12c1 2.5 5 7 10 7 1.8 0 3.4-.5 4.8-1.3"/><path d="M9.9 9.9a3 3 0 0 0 4.2 4.2"/></svg>
+              <p><strong>Masked on screen and in the file</strong> A preset is on from the first request</p>
+            </li>
+            <li class="proof__item">
+              <svg class="proof__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+              <p><strong>No proxy, no certificate</strong> Nothing to install beyond the extension</p>
+            </li>
+            <li class="proof__item">
+              <svg class="proof__icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M5 21h14"/></svg>
+              <p><strong>HAR or JSON export</strong> The capture, the filtered rows or the selection</p>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -296,6 +243,140 @@
         </div>
       </section>
 
+      <section id="workflow" class="section workflow">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">From bug reproduced to ticket attached</p>
+            <h2>One window for the whole path</h2>
+            <p class="section__lead">A bug report has five steps. Loupewire lands on each one, and the fourth is the reason it exists.</p>
+          </header>
+          <ol class="cards cards--steps">
+            <li class="card">
+              <p class="card__step"><span class="card__number" aria-hidden="true">1</span>Reproduce</p>
+              <h3 class="card__title">Set up the request</h3>
+              <p class="card__body">Add or set a request header for every URL that matches a pattern: a token for staging, a feature flag, a tenant. Block an endpoint to see how the page copes without it.</p>
+              <a class="card__link" href="/guides/header-rules/">How header rules work</a>
+            </li>
+            <li class="card">
+              <p class="card__step"><span class="card__number" aria-hidden="true">2</span>Observe</p>
+              <h3 class="card__title">See the whole flow</h3>
+              <p class="card__body">Every tab, popup and redirect lands in one table. A login that bounces through three hosts reads as one list, not three DevTools windows.</p>
+              <a class="card__link" href="/guides/first-capture/">Your first capture</a>
+            </li>
+            <li class="card">
+              <p class="card__step"><span class="card__number" aria-hidden="true">3</span>Isolate</p>
+              <h3 class="card__title">Find the failing request</h3>
+              <p class="card__body">Track or skip URLs while capturing. Filter by URL, method, status, date and cache state with <code>&amp;</code> and <code>|</code>. Pause, find text inside a request, clear the noise.</p>
+              <a class="card__link" href="/guides/filter/">How filtering works</a>
+            </li>
+            <li class="card card--accent">
+              <p class="card__step"><span class="card__number" aria-hidden="true">4</span>Evidence</p>
+              <h3 class="card__title">Hide the secrets, keep the proof</h3>
+              <p class="card__body">Tokens and cookies are masked before they reach the screen and before they reach the file. Export the capture, the filtered rows or the selection as HAR or JSON.</p>
+              <a class="card__link" href="/guides/export/">Export and copy</a>
+            </li>
+            <li class="card">
+              <p class="card__step"><span class="card__number" aria-hidden="true">5</span>Return</p>
+              <h3 class="card__title">Pick up where you left off</h3>
+              <p class="card__body">Saved sessions and environment profiles are on the way, so tomorrow's ticket starts from today's setup.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="why" class="section why">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">Why Loupewire</p>
+            <h2>Masked before the file exists</h2>
+          </header>
+          <div class="feature">
+            <div class="feature__copy">
+              <h3>Masking at the source</h3>
+              <p>A HAR file is a credential: the tokens inside it are live. Sanitizers clean a file after it exists. Loupewire masks values on screen and in every export before a file exists, so a screenshot and a HAR are both safe to attach without a second pass. A built-in preset covers the usual secret-bearing headers and cookies out of the box.</p>
+              <a class="feature__link" href="/guides/mask/">Mask and the secret preset</a>
+            </div>
+            <figure class="feature__figure">
+              <img src="/assets/screenshots/04-export-masked.webp" width="1280" height="720" alt="The export dialog with masking on and the selected rows about to be written to a HAR file" loading="lazy">
+            </figure>
+          </div>
+          <div class="feature feature--reverse">
+            <div class="feature__copy">
+              <h3>Every tab in one window</h3>
+              <p>DevTools is per tab and forgets on navigation unless you remember to preserve the log. Flows that cross tabs, such as SSO, OAuth, 3-D Secure and vendor checkout, are exactly the ones you are asked to document. Loupewire records all of them in one tracker window you can leave open all day.</p>
+              <a class="feature__link" href="/guides/track-and-skip/">Track and skip</a>
+            </div>
+            <figure class="feature__figure">
+              <img src="/assets/video/intro-poster.jpg" width="1280" height="720" alt="The tracker table filling with requests to app, api, cdn and auth hosts of one site" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="devtools" class="section devtools">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">Where it fits</p>
+            <h2>Next to DevTools, not instead of it</h2>
+            <p class="section__lead">DevTools is the right tool for a breakpoint or a performance profile. Loupewire is for the evidence you hand to someone else.</p>
+          </header>
+          <div class="compare-scroll">
+            <table class="compare">
+              <caption class="visually-hidden">What the DevTools Network panel and Loupewire each do</caption>
+              <thead>
+                <tr>
+                  <td></td>
+                  <th scope="col">DevTools Network panel</th>
+                  <th scope="col" class="compare__ours">Loupewire</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Traffic from every tab and popup</th>
+                  <td data-label="DevTools">One tab per DevTools window</td>
+                  <td class="compare__ours" data-label="Loupewire"><span class="compare__yes">Every tab in one tracker window</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Requests after a navigation</th>
+                  <td data-label="DevTools">Kept when Preserve log is on</td>
+                  <td class="compare__ours" data-label="Loupewire"><span class="compare__yes">Kept while the tracker is open</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Tokens and cookies on screen</th>
+                  <td data-label="DevTools">Shown as sent</td>
+                  <td class="compare__ours" data-label="Loupewire"><span class="compare__yes">Masked before they render</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Your own mask patterns in the export</th>
+                  <td data-label="DevTools">Not available</td>
+                  <td class="compare__ours" data-label="Loupewire"><span class="compare__yes">Masked HAR or JSON</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Console, debugger, performance</th>
+                  <td data-label="DevTools"><span class="compare__yes">Yes</span></td>
+                  <td class="compare__ours" data-label="Loupewire"><span class="compare__no">No</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="privacy" class="section privacy">
+        <div class="container">
+          <header class="section__header">
+            <p class="section__eyebrow">Privacy</p>
+            <h2>On your device, and only there</h2>
+            <p class="section__lead">Everything runs in the browser. Captured headers, cookies, bodies and URLs stay in the tracker window and are never written to disk unless you export them. The extension makes no network requests of its own. No telemetry, no analytics, no crash reporting, no account.</p>
+          </header>
+          <ul class="checklist privacy__facts">
+            <li>Captured traffic lives in the tracker window's memory and is gone when it closes</li>
+            <li>Your patterns, rules and settings stay in the browser's local extension storage</li>
+            <li>The <a href="/privacy-policy/">privacy policy</a> says the same thing in more words</li>
+          </ul>
+        </div>
+      </section>
+
       <section id="faq" class="section faq">
         <div class="container split faq__inner">
           <div class="faq__intro">
@@ -304,12 +385,12 @@
           </div>
           <div class="faq__list">
             <details class="faq__item">
-              <summary class="faq__question">Is it free?</summary>
-              <div class="faq__answer"><p>Yes. Every feature is available today with no account and no sign-up. A paid tier that removes limits on volume and convenience may come later; masking, export and capture stay available on the free tier.</p></div>
+              <summary class="faq__question">Do I need an account?</summary>
+              <div class="faq__answer"><p>No. Install it, press Ctrl+Shift+1, and the tracker opens. There is nothing to sign up for.</p></div>
             </details>
             <details class="faq__item">
               <summary class="faq__question">Does it show response bodies?</summary>
-              <div class="faq__answer"><p>No. The browser API that makes all-tab capture possible never exposes them. Tools that show bodies attach a debugger to each tab or inject scripts into pages; Loupewire does neither. Use DevTools alongside it for a body.</p></div>
+              <div class="faq__answer"><p>Not in the current version. Exports contain request and response headers, cookies, request bodies, timing and redirects.</p></div>
             </details>
             <details class="faq__item">
               <summary class="faq__question">Does anything leave my machine?</summary>
@@ -321,7 +402,7 @@
             </details>
             <details class="faq__item">
               <summary class="faq__question">How is it different from DevTools?</summary>
-              <div class="faq__answer"><p>DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for response bodies and the console, Loupewire for the evidence you attach.</p></div>
+              <div class="faq__answer"><p>DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for the console and debugging, Loupewire for the evidence you attach.</p></div>
             </details>
             <details class="faq__item">
               <summary class="faq__question">Can I use it on a company laptop?</summary>
@@ -340,13 +421,29 @@
       </section>
 
       <section id="install" class="section cta">
-        <div class="container cta__inner">
-          <h2>The next ticket can carry the evidence without the credentials</h2>
-          <p class="cta__body">Install Loupewire, open the tracker with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd>, and export.</p>
-          <div class="cta__actions">
-            <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/dkoclbklglebhboiodckkicoajbcmbjd" data-cta="cta" data-edge-href="https://microsoftedge.microsoft.com/addons/detail/fobjeeglpkfdalljagicbgelbdmhlhgf"><img class="btn__icon" src="/assets/logos/google-chrome.svg" alt="" width="20" height="20"><span class="btn__label">Add to Chrome</span></a>
+        <div class="container">
+          <div class="cta__inner">
+            <h2>The next ticket can carry the evidence without the credentials</h2>
+            <ol class="cta__steps">
+              <li class="cta__step">
+                <h3>Add it to your browser</h3>
+                <p>From the Chrome Web Store or Edge Add-ons. There is no account to create.</p>
+              </li>
+              <li class="cta__step">
+                <h3>Open the tracker</h3>
+                <p>Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>1</kbd>, or click the toolbar icon. It opens in its own window and captures every tab.</p>
+              </li>
+              <li class="cta__step">
+                <h3>Reproduce, then export</h3>
+                <p>The secret preset is on from the first request. Export the capture, the filtered rows or the selection.</p>
+              </li>
+            </ol>
+            <div class="cta__actions">
+              <a class="btn btn--primary btn--lg" href="https://chromewebstore.google.com/detail/dkoclbklglebhboiodckkicoajbcmbjd" data-cta="cta" data-edge-href="https://microsoftedge.microsoft.com/addons/detail/fobjeeglpkfdalljagicbgelbdmhlhgf"><img class="btn__icon" src="/assets/logos/google-chrome.svg" alt="" width="20" height="20"><span class="btn__label">Add to Chrome</span></a>
+            </div>
+            <p class="store-links">Listed on the <a href="https://chromewebstore.google.com/detail/dkoclbklglebhboiodckkicoajbcmbjd" data-cta="cta-store">Chrome Web Store</a> and <a href="https://microsoftedge.microsoft.com/addons/detail/fobjeeglpkfdalljagicbgelbdmhlhgf" data-cta="cta-store">Edge Add-ons</a></p>
+            <p class="cta__note">For Chrome, Edge &amp; Chromium browsers</p>
           </div>
-          <p class="cta__note">For Chrome, Edge &amp; Chromium browsers</p>
         </div>
       </section>
 

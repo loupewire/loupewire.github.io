@@ -64,7 +64,7 @@
         {
           "@type": "FAQPage",
           "@id": "https://loupewire.github.io/support/#faq",
-          "mainEntity": [{"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every feature is available today with no account and no sign-up. A paid tier that removes limits on volume and convenience may come later; masking, export and capture stay available on the free tier."}},{"@type":"Question","name":"Does it show response bodies?","acceptedAnswer":{"@type":"Answer","text":"No. The browser API that makes all-tab capture possible never exposes them. Tools that show bodies attach a debugger to each tab or inject scripts into pages; Loupewire does neither. Use DevTools alongside it for a body."}},{"@type":"Question","name":"Does anything leave my machine?","acceptedAnswer":{"@type":"Answer","text":"Nothing from the extension. It makes no network requests of its own. This website uses Google Analytics to count visits; the extension does not, and the privacy policy keeps the two apart."}},{"@type":"Question","name":"Which browsers?","acceptedAnswer":{"@type":"Answer","text":"Chrome, Edge and other Chromium browsers."}},{"@type":"Question","name":"How is it different from DevTools?","acceptedAnswer":{"@type":"Answer","text":"DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for response bodies and the console, Loupewire for the evidence you attach."}},{"@type":"Question","name":"Can I use it on a company laptop?","acceptedAnswer":{"@type":"Answer","text":"That is what it is for. It needs no system proxy, no root certificate and no admin rights, only the extension permissions the store shows you. Follow your employer's policy on what you attach to tickets."}},{"@type":"Question","name":"What does \"masked\" mean, exactly?","acceptedAnswer":{"@type":"Answer","text":"A masked value shows its first and last characters and hides the rest, on screen and in every export. Masking is a display transform; the extension keeps no copy of the value anywhere."}},{"@type":"Question","name":"Where do I report a bug or ask a question?","acceptedAnswer":{"@type":"Answer","text":"In the public loupewire-support repository on GitHub. Attach a masked export, say which browser and version, and describe what you expected."}}]
+          "mainEntity": [{"@type":"Question","name":"Do I need an account?","acceptedAnswer":{"@type":"Answer","text":"No. Install it, press Ctrl+Shift+1, and the tracker opens. There is nothing to sign up for."}},{"@type":"Question","name":"Does it show response bodies?","acceptedAnswer":{"@type":"Answer","text":"Not in the current version. Exports contain request and response headers, cookies, request bodies, timing and redirects."}},{"@type":"Question","name":"Does anything leave my machine?","acceptedAnswer":{"@type":"Answer","text":"Nothing from the extension. It makes no network requests of its own. This website uses Google Analytics to count visits; the extension does not, and the privacy policy keeps the two apart."}},{"@type":"Question","name":"Which browsers?","acceptedAnswer":{"@type":"Answer","text":"Chrome, Edge and other Chromium browsers."}},{"@type":"Question","name":"How is it different from DevTools?","acceptedAnswer":{"@type":"Answer","text":"DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for the console and debugging, Loupewire for the evidence you attach."}},{"@type":"Question","name":"Can I use it on a company laptop?","acceptedAnswer":{"@type":"Answer","text":"That is what it is for. It needs no system proxy, no root certificate and no admin rights, only the extension permissions the store shows you. Follow your employer's policy on what you attach to tickets."}},{"@type":"Question","name":"What does \"masked\" mean, exactly?","acceptedAnswer":{"@type":"Answer","text":"A masked value shows its first and last characters and hides the rest, on screen and in every export. Masking is a display transform; the extension keeps no copy of the value anywhere."}},{"@type":"Question","name":"Where do I report a bug or ask a question?","acceptedAnswer":{"@type":"Answer","text":"In the public loupewire-support repository on GitHub. Attach a masked export, say which browser and version, and describe what you expected."}}]
         },
         {
           "@type": "BreadcrumbList",
@@ -172,12 +172,12 @@
           </div>
           <div class="faq__list">
             <details class="faq__item">
-              <summary class="faq__question">Is it free?</summary>
-              <div class="faq__answer"><p>Yes. Every feature is available today with no account and no sign-up. A paid tier that removes limits on volume and convenience may come later; masking, export and capture stay available on the free tier.</p></div>
+              <summary class="faq__question">Do I need an account?</summary>
+              <div class="faq__answer"><p>No. Install it, press Ctrl+Shift+1, and the tracker opens. There is nothing to sign up for.</p></div>
             </details>
             <details class="faq__item">
               <summary class="faq__question">Does it show response bodies?</summary>
-              <div class="faq__answer"><p>No. The browser API that makes all-tab capture possible never exposes them. Tools that show bodies attach a debugger to each tab or inject scripts into pages; Loupewire does neither. Use DevTools alongside it for a body.</p></div>
+              <div class="faq__answer"><p>Not in the current version. Exports contain request and response headers, cookies, request bodies, timing and redirects.</p></div>
             </details>
             <details class="faq__item">
               <summary class="faq__question">Does anything leave my machine?</summary>
@@ -189,7 +189,7 @@
             </details>
             <details class="faq__item">
               <summary class="faq__question">How is it different from DevTools?</summary>
-              <div class="faq__answer"><p>DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for response bodies and the console, Loupewire for the evidence you attach.</p></div>
+              <div class="faq__answer"><p>DevTools shows one tab and shows raw tokens. Loupewire shows every tab in one window and masks tokens before you see them. Use both: DevTools for the console and debugging, Loupewire for the evidence you attach.</p></div>
             </details>
             <details class="faq__item">
               <summary class="faq__question">Can I use it on a company laptop?</summary>

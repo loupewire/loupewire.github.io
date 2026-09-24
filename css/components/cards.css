@@ -53,6 +53,30 @@
   color: var(--loupewire-accent);
 }
 
+/* The workflow's step number, in a disc beside the step's name. The number
+   is aria-hidden: the <ol> already gives each step its position. */
+.card__step {
+  display: flex;
+  align-items: center;
+  gap: var(--loupewire-space-sm);
+}
+
+.card__number {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 24px;
+  block-size: 24px;
+  border-radius: var(--loupewire-radius-full);
+  background: var(--loupewire-brand-primary-subtle);
+  color: var(--loupewire-brand-primary-active);
+  letter-spacing: 0;
+}
+
+.card--accent .card__number {
+  background: var(--loupewire-brand-primary);
+  color: var(--loupewire-brand-primary-ink);
+}
+
 .card__title {
   font-size: var(--loupewire-display-sm);
 }
